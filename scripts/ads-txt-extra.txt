@@ -1,0 +1,6 @@
+# Extra ads.txt lines for ad networks other than Pubfuture.
+# The update-ads-txt workflow appends every non-comment line here to ads.txt,
+# after Pubfuture's list, on every run (daily, and on any push to this file).
+# Add a network's lines here once it approves the site. Never edit ads.txt
+# directly: the daily sync regenerates it and would drop the change.
+# Format: <ad system domain>, <publisher id>, <DIRECT|RESELLER>[, <cert authority id>]

@@ -1,0 +1,31 @@
+<html>
+  <head>
+<base href="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Tunnel-Rush/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tunnel Rush</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="UnityLoader.js"></script>
+    <script src="UnityProgress.js"></script>
+    <link rel="icon" href="img/tunnel.jpg">
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "build.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}});
+    </script>
+  </head>
+  <body>
+    <!-- 
+-->
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 100%; height: 95%; margin: auto;"></div>
+	  <div class="footer">
+	            <div class="webgl-logo"></div>
+	            <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+	            <div class="title">Tunnel Rush</div>
+	        </div>
+    </div>
+    <script type="application/javascript" src="/js/main.js"></script>
+  </body>
+</html>

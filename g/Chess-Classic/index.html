@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<base href="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist4.github.io@e943a1b698da614116f9d296463b860a7926e033/Chess-Classic/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+    <title>Chess Classic</title>
+    <link rel="stylesheet" href="assets/css/styles.css" nonce="l8W__iZ7xgOF2sxYxPrsbQ">
+
+    <script src="https://cdn.jsdelivr.net/gh/bubbls/youtube-playables@bd56fc0f1432d00b5a31210a2e577f8250d1ed8d/ytgame.js" nonce="l8W__iZ7xgOF2sxYxPrsbQ"></script>
+    <script nonce="l8W__iZ7xgOF2sxYxPrsbQ">ytgame.game.firstFrameReady();</script>
+
+    <!-- ---------------- API Snippet ---------------- -->
+    <script nonce="l8W__iZ7xgOF2sxYxPrsbQ">
+        window.famobi_gameID = "chess-classic"; // the actual GAMEID is added to the final version by Famobi
+        window.famobi_gameJS = [
+            "vendors.bundle.js",
+            "main.bundle.js"
+        ];
+        (function (document, url, fgJS, firstJS) {
+            fgJS = document.createElement('script');
+            firstJS = document.getElementsByTagName('script')[0];
+            fgJS.src = url + "";
+            firstJS.parentNode.insertBefore(fgJS, firstJS);
+        })(document, 'html5games/gameapi/v1.js');         
+    </script>
+
+    <!-- ---------------- API Snippet end ------------- -->
+    
+</head>
+
+<body>
+    <div id="preloader">
+        <div id="loading-text"></div>
+        <div class="lds-default">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div id="game-container"></div>
+</body>
+
+</html>

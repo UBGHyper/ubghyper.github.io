@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# NOTE: favorites/stats/saves are kept out of the index with
+# <meta name="robots" content="noindex,follow"> on the pages themselves — NOT with
+# Disallow. Blocking them here stopped Google reading the noindex, so it indexed the
+# URLs from links anyway and served them with no content: 12,164 impressions at
+# 0.07% CTR, ranking at position ~1.3 with nothing to show. A page must be
+# crawlable for its noindex to be obeyed.
+
+Sitemap: https://ubghyper.github.io/sitemap.xml

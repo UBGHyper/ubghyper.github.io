@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<base href="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist4.github.io@e943a1b698da614116f9d296463b860a7926e033/Vex-5/">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+    
+    <meta name="robots" content="noindex,nofollow" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <title>Vex 5</title>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+    <link rel="icon" href="vex.jpeg">
+</head>
+
+<body>
+    <div id="content"></div>
+    <div id="loader">Loading...</div>
+    <div id="orientation"></div>
+    <script type="text/javascript">
+        var gameName = "vex-5.min.js";
+
+        function addScript(src, buster, callback) {
+            var s = document.createElement("script");
+            s.setAttribute("src", src + "?v=" + buster);
+            if (typeof callback === "function") {
+                s.onload = callback;
+            }
+            document.body.appendChild(s);
+        }
+        addScript("version.js", Date.now(), function() {
+            addScript(gameName, version, function() {
+                new Vex5.Game();
+            });
+        });
+    </script>
+</body>
+
+</html>

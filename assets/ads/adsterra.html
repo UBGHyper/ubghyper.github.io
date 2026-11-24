@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<title>Advertisement</title>
+<style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}</style>
+</head>
+<body>
+<script>
+  // One Adsterra banner per frame; set-ad-units.js points each placement here
+  // as #k=KEY&w=WIDTH&h=HEIGHT. Adsterra's invoke.js is parser-blocking and
+  // reads a global atOptions, so in the page itself it would stall everything
+  // after it (the left rail precedes the game player) and two units would
+  // collide. Inside this frame it can only ever block itself.
+  (function () {
+    var p = new URLSearchParams(location.hash.slice(1));
+    var k = p.get('k') || '', w = +p.get('w'), h = +p.get('h');
+    if (!/^[0-9a-f]{32}$/.test(k) || !w || !h) return;
+    window.atOptions = { key: k, format: 'iframe', height: h, width: w, params: {} };
+    // Tell the page's analytics whether the ad script arrived (see ubgAdScript
+    // in analytics.js). Same origin, so the parent is reachable directly.
+    window.ubgReport = function (status) {
+      try { if (parent.ubgAdScript) parent.ubgAdScript('adsterra', status); } catch (e) {}
+    };
+    document.write('<script src="https://www.highrevenueformat.com/' + k + '/invoke.js"' +
+      ' onload="ubgReport(\'loaded\')" onerror="ubgReport(\'blocked\')"><\/script>');
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "UBGHyper — Free Unblocked Games",
+  "short_name": "UBGHyper",
+  "description": "Play 720+ free unblocked games online. Works at school or on Chromebook. No downloads, no sign-up.",
+  "start_url": "/?utm_source=pwa",
+  "display": "standalone",
+  "background_color": "#0f0f0f",
+  "theme_color": "#f07220",
+  "orientation": "any",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/assets/img/icon/main.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/icon/main.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "categories": ["games", "entertainment"]
+}

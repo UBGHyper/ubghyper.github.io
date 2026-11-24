@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<base href="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Game-Inside-a-Game/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+<script>/* ubg: block third-party ad, analytics and hotlink-check loaders added at runtime */(function(){var bad=/gamemonetize\.com|st39\/sdk|imasdk\.googleapis\.com|google-analytics\.com|googletagmanager\.com|static\.itch\.io\/htmlgame/i,E="data:text/javascript,";try{var P=HTMLScriptElement.prototype,d=Object.getOwnPropertyDescriptor(P,"src");Object.defineProperty(P,"src",{configurable:true,enumerable:d.enumerable,get:function(){return d.get.call(this)},set:function(v){d.set.call(this,bad.test(String(v))?E:v)}});var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){if(this instanceof HTMLScriptElement&&String(n).toLowerCase()==="src"&&bad.test(String(v)))v=E;return sa.call(this,n,v)};}catch(e){}})();</script>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | Game Inside a Game</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+</head>
+
+<body>
+  <div id="unity-container" class="unity-desktop">
+    <canvas id="unity-canvas"></canvas>
+    <div id="unity-loading-bar">
+      <div id="unity-logo"></div>
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
+      </div>
+    </div>
+    <div id="unity-footer">
+      <div id="unity-fullscreen-button"></div>
+    </div>
+  </div>
+  <script>
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/webv0_2d.loader.js";
+    var config = {
+      dataUrl: buildUrl + "/webv0_2d.data",
+      frameworkUrl: buildUrl + "/webv0_2d.framework.js",
+      codeUrl: buildUrl + "/webv0_2d.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "Sam Hogan",
+      productName: "Game Inside a Game",
+      productVersion: "0.2",
+    };
+
+    var container = document.querySelector("#unity-container");
+    var canvas = document.querySelector("#unity-canvas");
+    var loadingBar = document.querySelector("#unity-loading-bar");
+    var progressBarFull = document.querySelector("#unity-progress-bar-full");
+    var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      container.className = "unity-mobile";
+      config.devicePixelRatio = 1;
+    } else {
+      canvas.style.width = "960px";
+      canvas.style.height = "540px";
+    }
+    loadingBar.style.display = "block";
+
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = () => {
+      createUnityInstance(canvas, config, (progress) => {
+        progressBarFull.style.width = 100 * progress + "%";
+      }).then((unityInstance) => {
+        loadingBar.style.display = "none";
+        fullscreenButton.onclick = () => {
+          unityInstance.SetFullscreen(1);
+        };
+      }).catch((message) => {
+        alert(message);
+      });
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,192 @@
+freebuisness/assets<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+<base href="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist4.github.io@e943a1b698da614116f9d296463b860a7926e033/Survival-Race/">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>/* ubg-parts: files over jsDelivr's 20 MB limit are fetched as parts and joined */(function(){var GAME="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist4.github.io@e943a1b698da614116f9d296463b860a7926e033/Survival-Race/",PARTS="https://cdn.jsdelivr.net/gh/freeonlinewebtools/ubg-parts2@2cfae1c1097ac211f09174f6af3ccb7bcb361e49/gamelist4.github.io/Survival-Race/",MAP={"Build/yandexBrotli.wasm.unityweb":{"n":2,"type":"application/octet-stream"}};var g=new URL(GAME),gp=g.pathname;function relOf(u){try{var x=new URL(u,document.baseURI);if(x.origin!==g.origin||x.pathname.indexOf(gp)!==0)return null;var r=decodeURIComponent(x.pathname.slice(gp.length));return Object.prototype.hasOwnProperty.call(MAP,r)?r:null}catch(e){return null}}var nf=window.fetch.bind(window),cache={};function joined(rel){if(!cache[rel]){var m=MAP[rel],ps=[];for(var i=1;i<=m.n;i++)ps.push(nf(PARTS+rel+".p"+("00"+i).slice(-3)).then(function(r){if(!r.ok)throw new Error("part HTTP "+r.status);return r.blob()}));cache[rel]=Promise.all(ps).then(function(b){return new Blob(b,{type:m.type})});cache[rel].catch(function(){delete cache[rel]})}return cache[rel]}window.fetch=function(input,init){var u=typeof input==="string"?input:(input&&input.url)||String(input);var rel=relOf(u);if(!rel)return nf(input,init);return joined(rel).then(function(b){return new Response(b,{status:200,headers:{"Content-Type":MAP[rel].type,"Content-Length":String(b.size)}})})};var X=window.XMLHttpRequest;function P(){var x=new X(),d=null,h=[],o=x.open,sh=x.setRequestHeader,se=x.send;x.open=function(m,u){var rel=relOf(String(u));if(rel){d={m:m,rel:rel};return}d=null;return o.apply(x,arguments)};x.setRequestHeader=function(n,v){if(d){h.push([n,v]);return}return sh.call(x,n,v)};x.send=function(body){if(!d)return se.call(x,body);var dd=d;joined(dd.rel).then(function(b){o.call(x,dd.m,URL.createObjectURL(b),true);h.forEach(function(p){try{sh.call(x,p[0],p[1])}catch(e){}});se.call(x,body)},function(){try{x.dispatchEvent(new Event("error"))}catch(e){}})};return x}P.prototype=X.prototype;["UNSENT","OPENED","HEADERS_RECEIVED","LOADING","DONE"].forEach(function(k){P[k]=X[k]});window.XMLHttpRequest=P;})();</script>
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+    
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Survival Race</title>
+    <style>
+      html,
+      body {
+        background: #000;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+      }
+
+      div#gameContainer {
+        background: transparent !important;
+        position: absolute;
+      }
+
+      div#gameContainer canvas {
+        position: absolute;
+      }
+
+      div#gameContainer canvas[data-pixel-art="true"] {
+        position: absolute;
+        image-rendering: optimizeSpeed;
+        image-rendering: -webkit-crisp-edges;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: optimize-contrast;
+        image-rendering: pixelated;
+        -ms-interpolation-mode: nearest-neighbor;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameContainer">
+      <canvas id="unity-canvas" data-pixel-art=""></canvas>
+      <script src="Build/yandexBrotli.loader.js"></script>
+      <script>
+        let myGameInstance = null;
+        let ysdk = null;
+        let player = null;
+        let leaderboard;
+        let payments = null;
+        let initGame = false;
+        let nowFullAdOpen = false;
+
+        function InitGame() {
+          console.log('Init Game Success');
+          initGame = true;
+        }
+
+        function FullAdShow() {}
+
+        function RewardedShow(id) {}
+
+        function StickyAdActivity(show) {}
+
+        function InitPayments() {}
+
+        function BuyPayments(id) {}
+        let callCount_GetPayments = 0;
+
+        function GetPayments() {}
+
+        function ConsumePurchase(id) {}
+
+        function ConsumePurchases() {}
+
+        function InitLeaderboard() {}
+
+        function SetLeaderboardScores(_name, score) {}
+
+        function GetLeaderboardScores(nameLB, maxPlayers, quantityTop, quantityAround, photoSize, auth) {}
+
+        function EntriesLB(res, maxPlayers, photoSize) {
+          let LeaderboardEntriesText = 'no data';
+          let playersCount = 0;
+          let ranks = new Array(playersCount);
+          let photos = new Array(playersCount);
+          let mames = new Array(playersCount);
+          let scores = new Array(playersCount);
+          let uniqueIDs = new Array(playersCount);
+          let jsonPlayers = {
+            "entries": LeaderboardEntriesText,
+            "ranks": null,
+            "photos": photos,
+            "names": mames,
+            "scores": scores,
+            "uniqueIDs": uniqueIDs
+          };
+          return jsonPlayers;
+        }
+
+        function Review() {}
+
+        function PromptShow() {}
+
+        function PaintRBT(rbt) {}
+
+        function StaticRBTDeactivate() {}
+        var cloudSaves = 'noData';
+
+        function SaveCloud(jsonData, flush) {}
+
+        function LoadCloud(sendback) {}
+        var environmentData = 'null';
+
+        function RequestingEnvironmentData(sendback) {}
+        var playerData = 'noData';
+
+        function InitPlayer(sendback) {}
+
+        function NotAuthorized() {
+          let authJson = {
+            "playerAuth": "rejected",
+            "playerName": "unauthorized",
+            "playerId": "unauthorized",
+            "playerPhoto": "null"
+          };
+          return JSON.stringify(authJson);
+        }
+
+        function OpenAuthDialog() {}
+        var canvas = document.querySelector("#unity-canvas");
+        var config = {
+          dataUrl: "Build/yandexBrotli.data.unityweb",
+          frameworkUrl: "Build/yandexBrotli.framework.js.unityweb",
+          codeUrl: "Build/yandexBrotli.wasm.unityweb",
+          streamingAssetsUrl: "StreamingAssets",
+          companyName: "Survival",
+          productName: "Survival Race",
+          productVersion: "0.0.15",
+        };
+        var scaleToFit;
+        try {
+          scaleToFit = !!JSON.parse("true");
+        } catch (e) {
+          scaleToFit = true;
+        }
+
+        function progressHandler(progress) {
+          var percent = progress * 100 + '%';
+          canvas.style.background = 'linear-gradient(to right, white, white ' + percent + ', transparent ' + percent + ', transparent) no-repeat center';
+          canvas.style.backgroundSize = '100% 1rem';
+        }
+
+        function onResize() {
+          var container = canvas.parentElement;
+          var w;
+          var h;
+          if (scaleToFit) {
+            w = window.innerWidth;
+            h = window.innerHeight;
+            var r = 540 / 960;
+            if (w * r > window.innerHeight) {
+              w = Math.min(w, Math.ceil(h / r));
+            }
+            h = Math.floor(w * r);
+          } else {
+            w = 960;
+            h = 540;
+          }
+          container.style.width = canvas.style.width = w + "px";
+          container.style.height = canvas.style.height = h + "px";
+          container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+          container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+        }
+        var gameInstance;
+        createUnityInstance(canvas, config, progressHandler).then(function(instance) {
+          canvas = instance.Module.canvas;
+          onResize();
+          gameInstance = instance;
+        });
+        window.addEventListener('resize', onResize);
+        onResize();
+      </script>
+    </div>
+</body>
+</html>

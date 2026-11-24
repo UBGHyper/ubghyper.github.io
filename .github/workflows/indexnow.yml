@@ -1,0 +1,71 @@
+name: Submit to IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build URL list and submit to IndexNow
+        run: |
+          set -euo pipefail
+          SITE="https://ubghyper.github.io"
+          KEY="e7f3a2b1d4c89056ab3f7d2c"
+
+          # The URL list comes from sitemap.xml, not from three hand-written
+          # blocks. Those blocks drifted badly: the game query carried `head -500`
+          # against 619 non-broken games, and the static list named 9 URLs when
+          # the site has 19 landing pages — together roughly 133 canonical URLs
+          # that were never once submitted. Bing is ~45% of this site's organic
+          # sessions, so those were the expensive ones to miss.
+          #
+          # sitemap.xml is already the single source of truth: gen-game-pages.js
+          # rewrites it on every run and qa-links.js asserts every entry exists on
+          # disk. Deriving from it means the list cannot drift again, and it
+          # inherits the sitemap's deliberate exclusions (redirect stubs, and
+          # play.html which is noindex).
+          #
+          # The old 500 cap cited a per-request limit that does not exist —
+          # IndexNow accepts up to 10,000 URLs per submission.
+          # `|| true` so a sitemap that parses to nothing reaches the explicit
+          # check below rather than dying on pipefail with no explanation. The
+          # `tr` guards against a CRLF sitemap: there is no .gitattributes here,
+          # and a stray \r would be submitted as part of every URL.
+          URL_LIST=$( { grep -o '<loc>[^<]*</loc>' sitemap.xml || true; } \
+            | sed 's|</\?loc>||g' \
+            | tr -d '\r' \
+            | jq -R -s -c 'split("\n") | map(select(length > 0))')
+
+          COUNT=$(echo "$URL_LIST" | jq 'length')
+          echo "Submitting $COUNT URLs from sitemap.xml"
+
+          if [ "$COUNT" -eq 0 ]; then
+            echo "No URLs parsed from sitemap.xml — refusing to submit an empty list."
+            exit 1
+          fi
+
+          # Build the payload with jq so the URL list is embedded as real JSON
+          # rather than pasted into a heredoc.
+          PAYLOAD=$(jq -n \
+            --arg host "ubghyper.github.io" \
+            --arg key "$KEY" \
+            --arg keyLocation "$SITE/$KEY.txt" \
+            --argjson urlList "$URL_LIST" \
+            '{host: $host, key: $key, keyLocation: $keyLocation, urlList: $urlList}')
+
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X POST \
+            "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$PAYLOAD")
+
+          echo "IndexNow response: $STATUS"
+          if [ "$STATUS" -eq 200 ] || [ "$STATUS" -eq 202 ]; then
+            echo "$COUNT URLs submitted successfully."
+          else
+            echo "Unexpected status $STATUS — check key file is deployed."
+          fi

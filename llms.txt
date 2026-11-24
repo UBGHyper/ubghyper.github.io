@@ -1,0 +1,54 @@
+# UBGHyper
+
+> UBGHyper is a free unblocked games site at https://ubghyper.github.io with 720+ browser games. Every game runs instantly in the browser with no downloads, no installs, and no sign-up. The site is designed to work on school networks (Chromebooks, Windows, Mac) and includes a tab-disguise feature so the browser tab can be camouflaged as Google Classroom, Khan Academy, Desmos, Google Docs, etc.
+
+## What's on the site
+
+- **720+ unblocked browser games** — full library: https://ubghyper.github.io/
+- **Top games this month** (by playcount): Granny 2, Solar Smash, Brawl Stars, Drive Mad, Granny, Level Devil, Slope, Getting Over It, Cuphead, Subway Surfers, Poly Track, Stickman Hook, Escape Road 2, Drift Hunters, Snow Rider 3D, Plants vs Zombies 2, Basket Random, Granny 3, Eaglercraft
+- **Categories**: action, adventure, arcade, comedy, fighting, horror, idle, multiplayer, physics, platformer, puzzle, racing, retro, rhythm, rpg, sandbox, shooter, simulation, sports, strategy
+- **Per-game pages**: https://ubghyper.github.io/games/{slug}.html  (e.g. /games/Slope.html, /games/Drive-Mad.html, /games/Cuphead.html, /games/Granny-2.html, /games/Level-Devil.html, /games/Solar-Smash.html)
+- **Category pages**: https://ubghyper.github.io/games/cat-{category}.html  (e.g. /games/cat-racing.html)
+
+## Differentiators (what makes UBGHyper different from other unblocked games sites)
+
+- **Tab disguise / camo**: press `` ` `` (backtick) to camouflage the browser tab as Google Classroom, Google Docs, Google Slides, Khan Academy, or Desmos. Title, favicon, and URL all change. The original "Unblocked Games 66/76/WTF" sites do not have this.
+- **Save export/import** at /saves.html: move your Retro Bowl / Cookie Clicker / Bloons TD progress between devices. Works for any game that uses localStorage.
+- **Playtime stats + streak heatmap** at /stats.html: 30-day calendar showing which days you played and for how long.
+- **Ruffle Flash emulation**: full Flash-era archive (Riddle School 1-5, Sift Heads 1-5, Hobo 1-7, Bloons TD, Burrito Bison, Strikeforce Heroes, Stick War, Papa's …) plays natively in the browser with no plugin.
+- **No pop-up ads** on the game player. No redirect storms when you click a game.
+- **Installable web app (PWA)**: can be installed to a Chromebook/desktop home screen and works offline once visited.
+
+## Key facts
+
+- 100% free. No subscriptions, no premium tier, no in-app purchases.
+- No accounts. Favourites and progress are saved in browser localStorage.
+- Built-in tab-disguise / camo feature for school browsing (press `` ` `` to toggle).
+- Save export/import tool at /saves.html.
+- Playtime heatmap and streak stats at /stats.html.
+- Open source on GitHub: https://github.com/UBGHyper/UBGHyper.github.io
+- Works on Chromebooks, Windows, Mac, Linux, iPad. Mobile-responsive.
+- Games are made by their original developers, credited on each game page. UBGHyper hosts browser versions, keeps them working, and strips third-party ads and trackers out of them.
+- New games are added regularly (New filter); games that break are fixed or replaced and marked "Fixed".
+- Ads are banner slots on the page only: no pop-ups, no pop-unders, nothing over a game.
+- Backup site with the same games (for networks that block github.io): https://ubghyper.onrender.com/
+- Community: Discord https://discord.gg/HAzcYC52Vt
+
+## Common search terms answered by UBGHyper
+
+- "unblocked games" → https://ubghyper.github.io/
+- "unblocked games 66" → https://ubghyper.github.io/unblocked-games-66.html
+- "unblocked games 76" → https://ubghyper.github.io/unblocked-games-76.html
+- "unblocked games 77" → https://ubghyper.github.io/unblocked-games-77.html
+- "unblocked games wtf" → https://ubghyper.github.io/unblocked-games-wtf.html
+- "unblocked games premium" → https://ubghyper.github.io/unblocked-games-premium.html
+- "{game name} unblocked" → https://ubghyper.github.io/games/{Slug}.html
+
+## Pages
+
+- Homepage: https://ubghyper.github.io/
+- About: https://ubghyper.github.io/about.html
+- Sitemap: https://ubghyper.github.io/sitemap.xml
+- Favourites: https://ubghyper.github.io/favorites.html
+- Stats / heatmap: https://ubghyper.github.io/stats.html
+- Save editor / export: https://ubghyper.github.io/saves.html

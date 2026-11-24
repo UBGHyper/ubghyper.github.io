@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<base href="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist4.github.io@e943a1b698da614116f9d296463b860a7926e033/Monster-Tracks/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+<script>/* ubg: block third-party ad, analytics and hotlink-check loaders added at runtime */(function(){var bad=/gamemonetize\.com|st39\/sdk|imasdk\.googleapis\.com|google-analytics\.com|googletagmanager\.com|static\.itch\.io\/htmlgame/i,E="data:text/javascript,";try{var P=HTMLScriptElement.prototype,d=Object.getOwnPropertyDescriptor(P,"src");Object.defineProperty(P,"src",{configurable:true,enumerable:d.enumerable,get:function(){return d.get.call(this)},set:function(v){d.set.call(this,bad.test(String(v))?E:v)}});var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){if(this instanceof HTMLScriptElement&&String(n).toLowerCase()==="src"&&bad.test(String(v)))v=E;return sa.call(this,n,v)};}catch(e){}})();</script>
+<script>/* ubg: GameMonetize (JumpGame) ad SDK removed, no-op shim. The game waits for afterShowAd before it starts, so every ad "finishes" at once. */window.JumpGame=new Proxy({startup:function(){},showInterstitial:function(o){o&&o.afterShowAd&&o.afterShowAd()},showReward:function(o){o&&o.afterShowAd&&o.afterShowAd()}},{get:function(t,k){return k in t?t[k]:function(o){o&&typeof o.afterShowAd==="function"&&o.afterShowAd()}}});</script>
+  
+  
+  
+  <meta charset="utf-8">
+  <title>Monster Tracks</title>
+  <link rel="stylesheet" href="monster-tracks/webapp/fancade.css">
+<style>
+</style>
+</head>
+
+<body>
+  <div id="canvas_border">
+    <div id="play_content" class="middle center">
+      <div class="box">
+        <img src="monster-tracks/webapp/cover.jpg" class="cover">
+        <p class="title">Monster Tracks</p>
+        <p class="author">TGC</p>
+      </div>
+      <progress id="progress" class="loading" value="0" max="100"></progress>
+    </div>
+    <canvas class="emscripten" id="canvas" tabindex="-1"></canvas>
+  </div>
+  <script type="text/javascript" src="monster-tracks/webapp/source_min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="monster-tracks/webapp/index.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

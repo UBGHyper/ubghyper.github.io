@@ -1,0 +1,40 @@
+name: Bug Report
+description: Report a broken game or site issue
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: game
+    attributes:
+      label: Affected game (if any)
+      placeholder: e.g. Slope, Tetris — leave blank for site-wide issues
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What's happening?
+      description: Describe the bug clearly
+      placeholder: The game loads a blank screen / the favourites page is empty / ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to play.html?game=Slope
+        2. Wait for the loading overlay
+        3. Nothing happens — overlay stays forever
+    validations:
+      required: false
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser & OS
+      placeholder: e.g. Chrome 124 on Windows 11
+    validations:
+      required: false

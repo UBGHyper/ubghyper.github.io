@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+<base href="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Drift-Hunters/">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>/* ubg-parts: files over jsDelivr's 20 MB limit are fetched as parts and joined */(function(){var GAME="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Drift-Hunters/",PARTS="https://cdn.jsdelivr.net/gh/freeonlinewebtools/ubg-parts1@709ca8639503810477163f7a633631dc0e182605/gamelist8.github.io/Drift-Hunters/",MAP={"dh.data.unityweb.000":{"n":2,"type":"application/octet-stream"},"dh.data.unityweb.001":{"n":2,"type":"application/octet-stream"},"dh.data.unityweb.002":{"n":2,"type":"application/octet-stream"},"dh.data.unityweb.003":{"n":2,"type":"application/octet-stream"},"dh.data.unityweb.004":{"n":2,"type":"application/octet-stream"},"dh.data.unityweb.005":{"n":2,"type":"application/octet-stream"}};var g=new URL(GAME),gp=g.pathname;function relOf(u){try{var x=new URL(u,document.baseURI);if(x.origin!==g.origin||x.pathname.indexOf(gp)!==0)return null;var r=decodeURIComponent(x.pathname.slice(gp.length));return Object.prototype.hasOwnProperty.call(MAP,r)?r:null}catch(e){return null}}var nf=window.fetch.bind(window),cache={};function joined(rel){if(!cache[rel]){var m=MAP[rel],ps=[];for(var i=1;i<=m.n;i++)ps.push(nf(PARTS+rel+".p"+("00"+i).slice(-3)).then(function(r){if(!r.ok)throw new Error("part HTTP "+r.status);return r.blob()}));cache[rel]=Promise.all(ps).then(function(b){return new Blob(b,{type:m.type})});cache[rel].catch(function(){delete cache[rel]})}return cache[rel]}window.fetch=function(input,init){var u=typeof input==="string"?input:(input&&input.url)||String(input);var rel=relOf(u);if(!rel)return nf(input,init);return joined(rel).then(function(b){return new Response(b,{status:200,headers:{"Content-Type":MAP[rel].type,"Content-Length":String(b.size)}})})};var X=window.XMLHttpRequest;function P(){var x=new X(),d=null,h=[],o=x.open,sh=x.setRequestHeader,se=x.send;x.open=function(m,u){var rel=relOf(String(u));if(rel){d={m:m,rel:rel};return}d=null;return o.apply(x,arguments)};x.setRequestHeader=function(n,v){if(d){h.push([n,v]);return}return sh.call(x,n,v)};x.send=function(body){if(!d)return se.call(x,body);var dd=d;joined(dd.rel).then(function(b){o.call(x,dd.m,URL.createObjectURL(b),true);h.forEach(function(p){try{sh.call(x,p[0],p[1])}catch(e){}});se.call(x,body)},function(){try{x.dispatchEvent(new Event("error"))}catch(e){}})};return x}P.prototype=X.prototype;["UNSENT","OPENED","HEADERS_RECEIVED","LOADING","DONE"].forEach(function(k){P[k]=X[k]});window.XMLHttpRequest=P;})();</script>
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Google</title>
+    <meta name="description" content="Drift Hunters is an online 3D car drifting game. Race on multiple challenging racetracks and customize your cars.">
+    <script type="text/javascript" src="/cloak.js"></script>
+  <meta name="robots" content="noindex,nofollow" />
+    <style>
+      body {
+  margin: 0;
+  padding: 0;
+}
+.webgl-content * {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.webgl-content {
+  position: absolute;
+}
+.webgl-content,
+#gameContainer,
+#unityContainer,
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+.webgl-content .logo,
+.progress {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.webgl-content .logo {
+  background: url("progressLogo.Light.png") no-repeat center/contain;
+  width: 354px;
+  height: 130px;
+}
+.webgl-content .progress {
+  height: 18px;
+  width: 141px;
+  margin-top: 90px;
+}
+.webgl-content .progress .empty {
+  background: url("progressEmpty.Light.png") no-repeat right/cover;
+  float: right;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.webgl-content .progress .full {
+  background: url("progressFull.Light.png") no-repeat left/cover;
+  float: left;
+  width: 0%;
+  height: 100%;
+  display: inline-block;
+}
+.webgl-content .logo.Dark {
+  background-image: url(progressLogo.Dark.png);
+}
+.webgl-content .progress.Dark .empty {
+  background-image: url(progressEmpty.Dark.png);
+}
+.webgl-content .progress.Dark .full {
+  background-image: url(progressFull.Dark.png);
+}
+.webgl-content .footer {
+  margin-top: 5px;
+  height: 38px;
+  line-height: 38px;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-size: 18px;
+}
+.webgl-content .footer .webgl-logo,
+.title,
+.fullscreen {
+  height: 100%;
+  display: inline-block;
+  background: transparent center no-repeat;
+}
+.webgl-content .footer .webgl-logo {
+  background-image: url(webgl-logo.png);
+  width: 204px;
+  float: left;
+}
+.webgl-content .footer .title {
+  margin-right: 10px;
+  float: right;
+}
+.webgl-content .footer .fullscreen {
+  background-image: url(fullscreen.png);
+  width: 38px;
+  float: right;
+}
+    </style>
+  </head>
+  <body style="margin: 0 auto; overflow: hidden">
+  
+  
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 100%; height: 100%; margin: 0;"></div>
+  </div>
+    
+  </body>
+  <script src="UnityLoader2019.js"></script>
+  <script>
+  
+    var gameInstance = UnityLoader.instantiate("gameContainer", "dh.json");
+
+    function UnityProgress(gameInstance, progress) {
+      if (!gameInstance.Module) {
+        return;
+      }
+
+    }
+  </script>
+
+</html>

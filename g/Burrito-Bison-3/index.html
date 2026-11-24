@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<base href="https://cdn.jsdelivr.net/gh/UBGHyper/GameList.github.io@2892fc0e9813e7169cd0cc3a5885b3049ccb0e2b/Burrito-Bison-3/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>/* ubg-parts: files over jsDelivr's 20 MB limit are fetched as parts and joined */(function(){var GAME="https://cdn.jsdelivr.net/gh/UBGHyper/GameList.github.io@2892fc0e9813e7169cd0cc3a5885b3049ccb0e2b/Burrito-Bison-3/",PARTS="https://cdn.jsdelivr.net/gh/freeonlinewebtools/ubg-parts2@2cfae1c1097ac211f09174f6af3ccb7bcb361e49/GameList.github.io/Burrito-Bison-3/",MAP={"Build/Web.data.unityweb":{"n":2,"type":"application/octet-stream"}};var g=new URL(GAME),gp=g.pathname;function relOf(u){try{var x=new URL(u,document.baseURI);if(x.origin!==g.origin||x.pathname.indexOf(gp)!==0)return null;var r=decodeURIComponent(x.pathname.slice(gp.length));return Object.prototype.hasOwnProperty.call(MAP,r)?r:null}catch(e){return null}}var nf=window.fetch.bind(window),cache={};function joined(rel){if(!cache[rel]){var m=MAP[rel],ps=[];for(var i=1;i<=m.n;i++)ps.push(nf(PARTS+rel+".p"+("00"+i).slice(-3)).then(function(r){if(!r.ok)throw new Error("part HTTP "+r.status);return r.blob()}));cache[rel]=Promise.all(ps).then(function(b){return new Blob(b,{type:m.type})});cache[rel].catch(function(){delete cache[rel]})}return cache[rel]}window.fetch=function(input,init){var u=typeof input==="string"?input:(input&&input.url)||String(input);var rel=relOf(u);if(!rel)return nf(input,init);return joined(rel).then(function(b){return new Response(b,{status:200,headers:{"Content-Type":MAP[rel].type,"Content-Length":String(b.size)}})})};var X=window.XMLHttpRequest;function P(){var x=new X(),d=null,h=[],o=x.open,sh=x.setRequestHeader,se=x.send;x.open=function(m,u){var rel=relOf(String(u));if(rel){d={m:m,rel:rel};return}d=null;return o.apply(x,arguments)};x.setRequestHeader=function(n,v){if(d){h.push([n,v]);return}return sh.call(x,n,v)};x.send=function(body){if(!d)return se.call(x,body);var dd=d;joined(dd.rel).then(function(b){o.call(x,dd.m,URL.createObjectURL(b),true);h.forEach(function(p){try{sh.call(x,p[0],p[1])}catch(e){}});se.call(x,body)},function(){try{x.dispatchEvent(new Event("error"))}catch(e){}})};return x}P.prototype=X.prototype;["UNSENT","OPENED","HEADERS_RECEIVED","LOADING","DONE"].forEach(function(k){P[k]=X[k]});window.XMLHttpRequest=P;})();</script>
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+    <meta charset="utf-8">
+    <title>Burrito Bison</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            background: #000000;
+        }
+
+        #gameContainer {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .logo {
+            display: block;
+            width: max-width: 100vw;
+            height: max-height: 70vh;
+        }
+
+        .progress {
+            margin: 1.5em;
+            border: 1px solid white;
+            width: 50vw;
+            display: none;
+        }
+
+        .progress .full {
+            margin: 2px;
+            background: white;
+            height: 1em;
+            transform-origin: top left;
+        }
+
+        #loader {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spinner,
+        .spinner:after {
+            border-radius: 50%;
+            width: 5em;
+            height: 5em;
+        }
+
+        .spinner {
+            margin: 10px;
+            font-size: 10px;
+            position: relative;
+            text-indent: -9999em;
+            border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+            border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+            border-left: 1.1em solid #ffffff;
+            transform: translateZ(0);
+            animation: spinner-spin 1.1s infinite linear;
+        }
+
+        @keyframes spinner-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gameContainer"></div>
+    <div id="loader">
+        <img class="logo" src="Build/logo.png">
+        <div class="spinner"></div>
+        <div class="progress">
+            <div class="full"></div>
+        </div>
+    </div>
+</body>
+<script src="Build/UnityLoader.js"></script>
+<script src='Build/kongregate_api.js'></script>
+<script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json", {
+        onProgress: UnityProgress
+    });
+
+    function UnityProgress(gameInstance, progress) {
+        if (!gameInstance.Module) {
+            return;
+        }
+        const loader = document.querySelector("#loader");
+        if (!gameInstance.progress) {
+            const progress = document.querySelector("#loader .progress");
+            progress.style.display = "block";
+            gameInstance.progress = progress.querySelector(".full");
+            loader.querySelector(".spinner").style.display = "none";
+        }
+        gameInstance.progress.style.transform = `scaleX(${progress})`;
+        if (progress === 1 && !gameInstance.removeTimeout) {
+            loader.style.display = "none";
+        }
+    }
+</script>
+
+</html>

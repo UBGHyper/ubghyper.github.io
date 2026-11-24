@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html lang="en-us">
+
+  <head>
+<base href="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist4.github.io@e943a1b698da614116f9d296463b860a7926e033/beatblock/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+
+    
+
+    <meta
+
+      http-equiv="Cache-Control"
+
+      content="no-cache, no-store, must-revalidate"
+
+    />
+
+    <meta http-equiv="Pragma" content="no-cache" />
+
+    <meta http-equiv="Expires" content="0" />
+
+    <title>beatblock</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+  </head>
+
+  <body>
+
+    <canvas id="canvas"></canvas>
+
+    <div id="spinner" class="pending"></div>
+
+    <script>
+
+      (async () => {
+
+        const parts = [
+
+          "game.love.part000",
+
+          "game.love.part001",
+
+          "game.love.part002",
+
+          "game.love.part003",
+
+          "game.love.part004",
+
+        ];
+
+        const buffers = await Promise.all(
+
+          parts.map((p) => fetch(p).then((r) => r.arrayBuffer())),
+
+        );
+
+        const merged = new Blob(buffers, { type: "application/octet-stream" });
+
+        const url = URL.createObjectURL(merged);
+
+        const s = document.createElement("script");
+
+        s.src = "player.js?g=" + encodeURIComponent(url) + "&n=1";
+
+        document.body.appendChild(s);
+
+      })();
+
+    </script>
+
+  </body>
+
+</html>
+

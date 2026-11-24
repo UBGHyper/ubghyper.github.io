@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Stats - UBGHyper</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Your personal gaming stats on UBGHyper - total playtime, top games and more.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://ubghyper.github.io/stats.html">
+<link rel="icon" href="assets/img/icon/main.svg">
+<link rel="apple-touch-icon" href="assets/img/icon/main.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VE9J0CCHWZ"></script>
+<script src="/assets/js/analytics.js"></script>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">UBGHyper</a>
+  <div class="nav-links">
+    <a href="/">Games</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="stats.html" class="active">Stats</a>
+    <a href="saves.html">Saves</a>
+    <a href="about.html">About</a>
+    <a href="https://discord.gg/HAzcYC52Vt" target="_blank" rel="noopener" style="color:#5865F2;font-weight:600;text-decoration:none">Discord (Fixed)</a><a href="https://isotunnel.com/" target="_blank" rel="noopener" data-nav="isotunnel" style="color:var(--text);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px">isotunnel<span style="font-size:.74em;font-weight:500;color:var(--text);background:var(--surface-2,var(--border));border-radius:999px;padding:.15em .6em;line-height:1.3;white-space:nowrap">Out now</span></a>
+  </div>
+  <div class="camo-wrap">
+    <button class="camo-btn" id="camoBtn" title="Tab disguise (`)">
+      <svg class="icon" aria-hidden="true"><use href="#icon-mask"/></svg>
+    </button>
+    <div class="camo-dropdown" id="camoDropdown"></div>
+  </div>
+  <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+    <svg class="icon" aria-hidden="true"><use href="#icon-sun"/></svg>
+  </button>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation" aria-expanded="false">
+    <svg class="icon" aria-hidden="true"><use href="#icon-menu"/></svg>
+  </button>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="stats-wrap">
+
+      <!-- Header -->
+      <div class="stats-hd">
+        <h1>Your Stats</h1>
+        <p class="subtitle">All data is stored locally in your browser.</p>
+      </div>
+
+      <!-- KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon">
+            <svg class="icon" aria-hidden="true"><use href="#icon-gamepad"/></svg>
+          </div>
+          <div class="kpi-val" id="kpiGames">—</div>
+          <div class="kpi-label">Games played</div>
+        </div>
+        <div class="kpi-card kpi-featured">
+          <div class="kpi-icon">
+            <svg class="icon" aria-hidden="true"><use href="#icon-clock"/></svg>
+          </div>
+          <div class="kpi-val" id="kpiTime">—</div>
+          <div class="kpi-label">Total playtime</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">
+            <svg class="icon" aria-hidden="true"><use href="#icon-heart-solid"/></svg>
+          </div>
+          <div class="kpi-val" id="kpiFavs">—</div>
+          <div class="kpi-label">Favorites saved</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon">
+            <svg class="icon" aria-hidden="true"><use href="#icon-flame"/></svg>
+          </div>
+          <div class="kpi-val" id="kpiStreak">—</div>
+          <div class="kpi-label">Day streak</div>
+        </div>
+      </div>
+
+      <!-- Charts row (hidden until data loads) -->
+      <div class="stats-charts-row" id="chartsRow" style="display:none">
+        <div class="stats-panel">
+          <div class="stats-panel-header">
+            <span class="stats-panel-title">Daily Activity</span>
+            <span class="stats-panel-sub">Last 14 days</span>
+          </div>
+          <div class="activity-canvas-wrap">
+            <canvas id="activityChart"></canvas>
+          </div>
+        </div>
+        <div class="stats-panel">
+          <div class="stats-panel-header">
+            <span class="stats-panel-title">By Category</span>
+            <span class="stats-panel-sub">% of playtime</span>
+          </div>
+          <div class="donut-wrap">
+            <canvas id="categoryChart" style="max-width:160px;max-height:160px"></canvas>
+            <div class="donut-legend" id="donutLegend"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity heatmap (hidden until data loads) -->
+      <div class="stats-panel stats-heatmap-panel" id="heatmapPanel" style="display:none">
+        <div class="stats-panel-header">
+          <span class="stats-panel-title">Activity</span>
+          <span class="stats-panel-sub">Last 12 weeks</span>
+        </div>
+        <div class="heatmap-grid" id="heatmapGrid"></div>
+        <div class="heatmap-legend">
+          <span class="heatmap-leg-label">Less</span>
+          <div class="heatmap-leg-cells">
+            <div class="hm-cell"></div>
+            <div class="hm-cell" data-level="1"></div>
+            <div class="hm-cell" data-level="2"></div>
+            <div class="hm-cell" data-level="3"></div>
+            <div class="hm-cell" data-level="4"></div>
+            <div class="hm-cell" data-level="5"></div>
+          </div>
+          <span class="heatmap-leg-label">More</span>
+        </div>
+      </div>
+
+      <!-- Top games -->
+      <p class="stats-section-title">Top games by playtime</p>
+      <div id="statsList"></div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-copy">&copy; 2026 UBGHyper</p>
+    <div class="footer-links">
+      <a href="/">Games</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="stats.html">Stats</a>
+      <a href="saves.html">Saves</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/UBGHyper" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/camo.js"></script>
+<script>
+// ── Theme ─────────────────────────────────────────────────
+const html = document.documentElement;
+const themeBtn = document.getElementById('themeToggle');
+const SUN  = '<svg class="icon" aria-hidden="true"><use href="#icon-sun"/></svg>';
+const MOON = '<svg class="icon" aria-hidden="true"><use href="#icon-moon"/></svg>';
+const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+html.setAttribute('data-theme', savedTheme);
+themeBtn.innerHTML = savedTheme === 'dark' ? SUN : MOON;
+themeBtn.addEventListener('click', () => {
+  const t = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', t);
+  localStorage.setItem('theme', t);
+  themeBtn.innerHTML = t === 'dark' ? SUN : MOON;
+  if (lastActData)  drawActivity(lastActData.labels, lastActData.values);
+  if (lastCatData)  drawCategory(lastCatData.labels, lastCatData.values);
+});
+
+initCamo('Your Stats - UBGHyper');
+
+// ── Helpers ────────────────────────────────────────────────
+// Shard-aware game asset URLs — keep in sync with assets/js/utils.js.
+const SHARD_ORIGIN  = 'https://ubghyper.github.io';
+const SHARD_DEFAULT = 'GameList.github.io';
+const IMG_BASE = `${SHARD_ORIGIN}/${SHARD_DEFAULT}`;
+const gameBase   = g => { const s = (g && g.shard) || SHARD_DEFAULT; return s.includes('://') ? s.replace(/\/$/, '') : `${SHARD_ORIGIN}/${s}`; };
+const gameFolder = g => `${gameBase(g)}/${g.url}/`;
+const gameThumb  = g => (g && g.image ? `${gameFolder(g)}${g.image}` : '');
+
+function fmtTime(s) {
+  const m = Math.round(s / 60);
+  if (m < 60) return m + 'm';
+  const h = Math.floor(m / 60), rm = m % 60;
+  return rm ? `${h}h ${rm}m` : `${h}h`;
+}
+
+function countUp(el, target, duration) {
+  duration = duration || 700;
+  if (!target) { el.textContent = target === 0 ? '0' : '—'; return; }
+  const start = performance.now();
+  const step = t => {
+    const p = Math.min((t - start) / duration, 1);
+    const e = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(e * target);
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+function getDailyTotals(ptRaw) {
+  const daily = {};
+  for (const days of Object.values(ptRaw)) {
+    for (const [date, secs] of Object.entries(days)) {
+      daily[date] = (daily[date] || 0) + secs;
+    }
+  }
+  return daily;
+}
+
+function calcStreak(daily) {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const todayKey = today.toISOString().slice(0, 10);
+  const startOff = (daily[todayKey] || 0) > 0 ? 0 : 1;
+  let streak = 0;
+  for (let i = startOff; i < 365; i++) {
+    const d = new Date(+today - i * 864e5).toISOString().slice(0, 10);
+    if ((daily[d] || 0) > 0) streak++;
+    else break;
+  }
+  return streak;
+}
+
+function buildHeatmap(daily) {
+  const today = new Date(); today.setHours(0,0,0,0);
+  const N = 84;
+  const vals = [], keys = [];
+  for (let i = N - 1; i >= 0; i--) {
+    const key = new Date(+today - i * 864e5).toISOString().slice(0, 10);
+    keys.push(key);
+    vals.push(daily[key] || 0);
+  }
+  const max = Math.max(...vals, 1);
+  const grid = document.getElementById('heatmapGrid');
+  grid.innerHTML = '';
+  vals.forEach((secs, idx) => {
+    const cell = document.createElement('div');
+    const col = Math.floor(idx / 7);
+    cell.className = 'hm-cell hm-anim';
+    cell.style.animationDelay = `${col * 18}ms`;
+    if (secs > 0) {
+      const r = secs / max;
+      cell.dataset.level = r > 0.8 ? 5 : r > 0.55 ? 4 : r > 0.3 ? 3 : r > 0.08 ? 2 : 1;
+    }
+    cell.title = `${keys[idx]}: ${fmtTime(secs)}`;
+    grid.appendChild(cell);
+  });
+}
+
+// ── Charts ─────────────────────────────────────────────────
+let actChart = null, catChart = null;
+let lastActData = null, lastCatData = null;
+const PALETTE = ['#f07220','#e85252','#7c6bff','#3bbdb4','#f5c842','#4ac98f','#e87bba','#6699ff'];
+
+function chartColors() {
+  const dark = html.getAttribute('data-theme') === 'dark';
+  return {
+    grid: dark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.06)',
+    tick: dark ? '#666' : '#999',
+    border: dark ? '#1c1c1c' : '#ffffff',
+  };
+}
+
+function drawActivity(labels, values) {
+  lastActData = { labels, values };
+  const c = chartColors();
+  if (actChart) actChart.destroy();
+  actChart = new Chart(document.getElementById('activityChart'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        backgroundColor: values.map((_, i) => i === values.length - 1 ? '#f07220' : 'rgba(240,114,32,0.38)'),
+        borderRadius: 4,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.y} min` } }
+      },
+      scales: {
+        x: { grid: { color: c.grid }, ticks: { color: c.tick, font: { size: 10 }, maxRotation: 0 } },
+        y: { beginAtZero: true, grid: { color: c.grid }, ticks: { color: c.tick, font: { size: 10 }, callback: v => v + 'm' } }
+      }
+    }
+  });
+}
+
+function drawCategory(labels, values) {
+  lastCatData = { labels, values };
+  const c = chartColors();
+  if (catChart) catChart.destroy();
+  catChart = new Chart(document.getElementById('categoryChart'), {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        backgroundColor: PALETTE.slice(0, labels.length),
+        borderWidth: 2,
+        borderColor: c.border,
+        hoverOffset: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      cutout: '68%',
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed}%` } }
+      }
+    }
+  });
+  document.getElementById('donutLegend').innerHTML = labels.map((l, i) =>
+    `<div class="donut-leg-item">
+      <div class="donut-leg-dot" style="background:${PALETTE[i]}"></div>
+      <span class="donut-leg-name">${l}</span>
+      <span class="donut-leg-pct">${values[i]}%</span>
+    </div>`
+  ).join('');
+}
+
+// ── Init ───────────────────────────────────────────────────
+async function init() {
+  const ptRaw = JSON.parse(localStorage.getItem('ubg_pt') || '{}');
+  const favs  = JSON.parse(localStorage.getItem('ubg_fav') || localStorage.getItem('favorites') || '[]');
+
+  // Aggregate
+  const totals = {};
+  const daily  = getDailyTotals(ptRaw);
+  let grandTotal = 0;
+  for (const [url, days] of Object.entries(ptRaw)) {
+    const sum = Object.values(days).reduce((a, b) => a + b, 0);
+    if (sum > 0) { totals[url] = sum; grandTotal += sum; }
+  }
+  const gamesPlayed = Object.keys(totals).length;
+  const streak = calcStreak(daily);
+
+  // KPI values
+  countUp(document.getElementById('kpiGames'), gamesPlayed);
+  document.getElementById('kpiTime').textContent = grandTotal > 0 ? fmtTime(grandTotal) : '0m';
+  countUp(document.getElementById('kpiFavs'), favs.length);
+  document.getElementById('kpiStreak').textContent = streak > 0 ? streak + 'd' : '—';
+
+  if (gamesPlayed === 0) {
+    document.getElementById('statsList').innerHTML = `
+      <div class="stats-empty">
+        <p>No playtime recorded yet.</p>
+        <a href="/" class="btn">
+          <svg class="icon" aria-hidden="true"><use href="#icon-gamepad"/></svg> Play some games
+        </a>
+      </div>`;
+    return;
+  }
+
+  // Show panels
+  const chartsRow = document.getElementById('chartsRow');
+  chartsRow.style.display = '';
+  chartsRow.classList.add('panel-in');
+  const heatmapPanel = document.getElementById('heatmapPanel');
+  heatmapPanel.style.display = '';
+  heatmapPanel.classList.add('panel-in');
+  buildHeatmap(daily);
+
+  // Game metadata
+  let gameMap = {};
+  try {
+    const res = await fetch('assets/games.json');
+    const all = (await res.json()).filter(g => g && g.name && g.url);
+    all.forEach(g => { gameMap[g.url] = g; });
+  } catch {}
+
+  // Activity chart data (last 14 days)
+  const actLabels = [], actValues = [];
+  for (let i = 13; i >= 0; i--) {
+    const d = new Date(Date.now() - i * 864e5).toISOString().slice(0, 10);
+    actLabels.push(d.slice(5));
+    actValues.push(Math.round((daily[d] || 0) / 60 * 10) / 10);
+  }
+
+  // Wait for Chart.js (deferred CDN — fetch gives it time, but guarantee it)
+  await new Promise(resolve => {
+    if (typeof Chart !== 'undefined') return resolve();
+    const t = setInterval(() => { if (typeof Chart !== 'undefined') { clearInterval(t); resolve(); } }, 50);
+    setTimeout(resolve, 4000); // fallback
+  });
+
+  drawActivity(actLabels, actValues);
+
+  // Category chart data
+  const tagMap = {};
+  for (const [url, secs] of Object.entries(totals)) {
+    const tag = gameMap[url]?.tags?.[0] || 'other';
+    tagMap[tag] = (tagMap[tag] || 0) + secs;
+  }
+  const sortedCats = Object.entries(tagMap).sort((a, b) => b[1] - a[1]);
+  let catLabels, catVals;
+  if (sortedCats.length > 6) {
+    const top = sortedCats.slice(0, 5);
+    const otherSecs = sortedCats.slice(5).reduce((a, [, s]) => a + s, 0);
+    catLabels = [...top.map(([t]) => t), 'other'];
+    catVals   = [...top.map(([, s]) => Math.round(s / grandTotal * 100)), Math.round(otherSecs / grandTotal * 100)];
+  } else {
+    catLabels = sortedCats.map(([t]) => t);
+    catVals   = sortedCats.map(([, s]) => Math.round(s / grandTotal * 100));
+  }
+  // Fix rounding drift
+  const catSum = catVals.reduce((a, b) => a + b, 0);
+  if (catSum !== 100 && catVals.length > 0) catVals[0] += 100 - catSum;
+
+  if (catLabels.length >= 2) drawCategory(catLabels, catVals);
+
+  // Top games list
+  const escStats = v => String(v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const sorted  = Object.entries(totals).sort((a, b) => b[1] - a[1]);
+  const maxSecs = sorted[0][1];
+  document.getElementById('statsList').innerHTML = `<div class="stats-list">${
+    sorted.map(([url, secs], i) => {
+      const g    = gameMap[url];
+      // Only games on the site are listed. A playtime key is browser data anyone can plant (a "save" file
+      // imported on the Saves page, or any game on this origin), so it must never reach innerHTML raw.
+      if (!g) return '';
+      const name = escStats(g.name);
+      const img  = g ? `${gameThumb(g)}` : '';
+      const barPct  = Math.round(secs / maxSecs * 100);
+      const timePct = Math.round(secs / grandTotal * 100);
+      const rankCls = i === 0 ? 'gold' : i === 1 ? 'silver' : i === 2 ? 'bronze' : '';
+      return `<a href="play.html?game=${encodeURIComponent(url)}" class="stats-row">
+        <span class="stats-rank ${rankCls}">${i + 1}</span>
+        <img class="stats-thumb" src="${img}" alt="${name}" loading="lazy" width="40" height="40" onerror="this.style.display='none'">
+        <div class="stats-info"><p class="stats-game-name">${name}</p></div>
+        <div class="stats-bar-wrap"><div class="stats-bar-fill" data-w="${barPct}"></div></div>
+        <span class="stats-pct">${timePct}%</span>
+        <span class="stats-time">${fmtTime(secs)}</span>
+      </a>`;
+    }).join('')
+  }</div>`;
+
+  // Animate bars in after paint
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    document.querySelectorAll('.stats-bar-fill').forEach(el => {
+      el.style.width = el.dataset.w + '%';
+    });
+  }));
+}
+
+init();
+</script>
+
+</body>
+</html>

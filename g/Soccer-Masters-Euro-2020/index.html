@@ -1,0 +1,101 @@
+<!DOCTYPE html><html lang="en"><head>
+<base href="https://cdn.jsdelivr.net/gh/UBGHyper/GameList.github.io@2892fc0e9813e7169cd0cc3a5885b3049ccb0e2b/Soccer-Masters-Euro-2020/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+<script>/* ubg: block third-party ad, analytics and hotlink-check loaders added at runtime */(function(){var bad=/gamemonetize\.com|st39\/sdk|imasdk\.googleapis\.com|google-analytics\.com|googletagmanager\.com|static\.itch\.io\/htmlgame/i,E="data:text/javascript,";try{var P=HTMLScriptElement.prototype,d=Object.getOwnPropertyDescriptor(P,"src");Object.defineProperty(P,"src",{configurable:true,enumerable:d.enumerable,get:function(){return d.get.call(this)},set:function(v){d.set.call(this,bad.test(String(v))?E:v)}});var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){if(this instanceof HTMLScriptElement&&String(n).toLowerCase()==="src"&&bad.test(String(v)))v=E;return sa.call(this,n,v)};}catch(e){}})();</script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">    
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">    
+    <title>
+        Football Masters
+     Unblocked - CrazyGames</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+</head>
+
+<body>
+    <div id="content"></div>
+    <div id="orientation"></div>
+    <div id="loader">Loading ...</div>
+    
+    <script type="text/javascript" src="assets/lib/nape.min.js">
+        var nape = "nape.min.js";
+    </script>
+    <script type="text/javascript" src="assets/lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/lib/easeljs-0.8.2.combined.js"></script>
+    <script type="text/javascript" src="assets/lib/bluebird.min.js"></script>
+    <script type="text/javascript" src="assets/lib/phaser.min.js"></script>
+    <script type="text/javascript" src="assets/lib/phaser-cachebuster.min.js"></script>
+    <script type="text/javascript" src="assets/lib/phaser-super-storage.min.js"></script>
+    <script type="text/javascript" src="assets/lib/dragonBones.min.js"></script>
+  
+    <script src="patch/js/crazygames-sdk-v1.js"></script>
+
+    <script type="text/javascript">
+    var useEvents = (typeof(Event) === 'function');
+
+        var myDispatchEvent = function (name){
+            var event;
+            if (useEvents){
+                event =  new Event(name);
+            }else{
+                event = document.createEvent('Event');
+                event.initEvent(name, true, true);
+            }
+            document.getElementById("content").dispatchEvent(event);
+        }
+            
+        document.getElementById('content').addEventListener('sdk_init',
+        function () {            
+            const {CrazySDK} = window.CrazyGames; // this is modified    
+            console.log("getting instance",CrazySDK);
+            var crazysdk = CrazySDK.getInstance();
+            try{
+                crazysdk.init();
+            }catch (err) {
+                console.log("Init SDK Error",err);
+            }
+            installListeners();
+            document.getElementById('content').addEventListener('sdk_request_ad',
+                function () { 
+                    const {CrazySDK} = window.CrazyGames; // this is modified   
+                    var sdk = CrazySDK.getInstance(); 
+                    console.log("request ad",sdk);
+                    sdk.requestAd();
+                });
+        });
+
+        var installListeners=function() {
+            const {CrazySDK} = window.CrazyGames; // this is modified  
+            var crazysdk = CrazySDK.getInstance();  
+            console.log("adding listeners",crazysdk);
+            crazysdk.addEventListener('adStarted', adStarted);
+            crazysdk.addEventListener('adError', adError);
+            crazysdk.addEventListener('adFinished', adFinished);
+        }
+
+        var adStarted = function(){
+            console.log("adStarted");
+            myDispatchEvent('sdk_mute');
+        }
+        
+        var adError = function(){
+            console.log("adError");
+            myDispatchEvent('sdk_unmute');
+            myDispatchEvent('sdk_ad_finished');
+        }
+        
+        var adFinished = function(){
+            console.log("adFinished");
+            myDispatchEvent('sdk_unmute');
+            myDispatchEvent('sdk_ad_finished');
+        }
+
+
+    </script>
+
+<script type="text/javascript" src="football_masters.min.js?2596e3a3ca7d7e599f6f"></script>
+
+</body></html>

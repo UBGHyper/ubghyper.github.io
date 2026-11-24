@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Save Editor — UBGHyper</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Edit, backup and restore your in-game save data on UBGHyper.">
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://ubghyper.github.io/saves.html">
+<link rel="icon" href="assets/img/icon/main.svg">
+<link rel="apple-touch-icon" href="assets/img/icon/main.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VE9J0CCHWZ"></script>
+<script src="/assets/js/analytics.js"></script>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/redesign.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">UBGHyper</a>
+  <div class="nav-links">
+    <a href="/">Games</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="stats.html">Stats</a>
+    <a href="saves.html" class="active">Saves</a>
+    <a href="about.html">About</a>
+    <a href="https://discord.gg/HAzcYC52Vt" target="_blank" rel="noopener" style="color:#5865F2;font-weight:600;text-decoration:none">Discord (Fixed)</a><a href="https://isotunnel.com/" target="_blank" rel="noopener" data-nav="isotunnel" style="color:var(--text);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px">isotunnel<span style="font-size:.74em;font-weight:500;color:var(--text);background:var(--surface-2,var(--border));border-radius:999px;padding:.15em .6em;line-height:1.3;white-space:nowrap">Out now</span></a>
+  </div>
+  <div class="camo-wrap">
+    <button class="camo-btn" id="camoBtn" title="Tab disguise (`)">
+      <svg class="icon" aria-hidden="true"><use href="#icon-mask"/></svg>
+    </button>
+    <div class="camo-dropdown" id="camoDropdown"></div>
+  </div>
+  <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+    <svg class="icon" aria-hidden="true"><use href="#icon-sun"/></svg>
+  </button>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation" aria-expanded="false">
+    <svg class="icon" aria-hidden="true"><use href="#icon-menu"/></svg>
+  </button>
+</nav>
+
+<main>
+  <div class="container">
+    <div class="sv-wrap">
+
+      <!-- Head: title + global actions -->
+      <header class="sv-head">
+        <div class="sv-head-text">
+          <h1 class="sv-title">Save editor</h1>
+          <p class="sv-sub">View, edit, backup and restore your in-game save data. Drag a backup JSON anywhere to import.</p>
+        </div>
+        <div class="sv-head-actions" id="backupBtns" style="display:none">
+          <button class="sv-action" id="exportBtn" title="Download all saves as JSON">
+            <svg class="icon" aria-hidden="true"><use href="#icon-share"/></svg>
+            Export all
+          </button>
+          <label class="sv-action" for="importFile" title="Restore from a backup file">
+            Import…
+            <input type="file" id="importFile" accept=".json" style="display:none">
+          </label>
+        </div>
+      </header>
+
+      <div class="sv-layout">
+
+        <!-- Sidebar: detected saves -->
+        <aside class="sv-sidebar">
+          <div class="sv-sidebar-head">
+            <span>Detected saves</span>
+            <span class="sv-sidebar-count" id="savesCount">—</span>
+          </div>
+          <div class="sv-search-wrap">
+            <input type="text" class="sv-search" id="savesSearch" placeholder="Search saves…" autocomplete="off" spellcheck="false" aria-label="Search saves">
+          </div>
+          <div class="sv-list" id="savesList">
+            <p class="sv-empty">Connecting to game storage…</p>
+          </div>
+        </aside>
+
+        <!-- Editor pane -->
+        <section class="sv-pane">
+          <div class="sv-placeholder" id="savesPlaceholder">
+            <svg class="sv-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <p>Select a save from the list to view and edit it.</p>
+          </div>
+
+          <div id="savesEditor" style="display:none">
+            <div class="sv-editor-head">
+              <div style="flex:1;min-width:0">
+                <p class="sv-key-name" id="editorKey"></p>
+                <p class="sv-key-meta" id="editorMeta"></p>
+              </div>
+              <div class="sv-editor-actions">
+                <button class="sv-action" id="copyBtn">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-share"/></svg>
+                  Copy
+                </button>
+                <button class="sv-action sv-action-danger" id="deleteBtn">Delete</button>
+                <button class="sv-action sv-action-primary" id="saveBtn">Save</button>
+              </div>
+            </div>
+
+            <!-- Tabs (decoded / raw / hex) -->
+            <div class="sv-tabs" id="decodeBar" style="display:none"></div>
+
+            <!-- Info banner -->
+            <div class="sv-info" id="savesInfo" style="display:none"></div>
+
+            <!-- Cookie Clicker structured editor -->
+            <div class="sv-cc" id="ccPanel" style="display:none">
+              <p class="sv-cc-heading">Cookie Clicker save</p>
+              <div class="sv-cc-fields">
+                <div class="sv-cc-field">
+                  <label class="sv-cc-label" for="ccName">Player name</label>
+                  <input class="sv-cc-input" id="ccName" type="text" spellcheck="false">
+                </div>
+                <div class="sv-cc-field">
+                  <label class="sv-cc-label" for="ccCookies">Cookies in bank</label>
+                  <input class="sv-cc-input" id="ccCookies" type="text" spellcheck="false" placeholder="e.g. 1000000">
+                </div>
+                <div class="sv-cc-field">
+                  <label class="sv-cc-label" for="ccBaked">Total baked</label>
+                  <input class="sv-cc-input" id="ccBaked" type="text" spellcheck="false" placeholder="e.g. 2000000">
+                </div>
+              </div>
+              <div class="sv-cc-footer">
+                <button class="sv-action sv-action-primary" id="ccApplyBtn">Apply &amp; Save</button>
+                <p class="sv-cc-warn">Cookie Clicker shows a save integrity notice after loading — this is normal, your changes apply fine.</p>
+              </div>
+            </div>
+
+            <textarea class="sv-textarea" id="savesTextarea" spellcheck="false" autocomplete="off"></textarea>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 UBGHyper</p>
+    <div class="footer-links">
+      <a href="/">Games</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="stats.html">Stats</a>
+      <a href="saves.html">Saves</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/UBGHyper" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast status -->
+<div class="sv-status-wrap" id="saveStatus" role="status" aria-live="polite"></div>
+
+<!-- Drag-drop overlay (shown on dragover) -->
+<div class="sv-drop-overlay" id="dropOverlay" aria-hidden="true">
+  <div class="sv-drop-box">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="17 8 12 3 7 8"/>
+      <line x1="12" y1="3" x2="12" y2="15"/>
+    </svg>
+    <p class="sv-drop-title">Drop your backup file</p>
+    <p class="sv-drop-sub">Restores all saves from a UBGHyper export JSON.</p>
+  </div>
+</div>
+
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/camo.js"></script>
+<script src="assets/js/utils.js" defer></script>
+<script defer>
+// â”€â”€ Init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+document.addEventListener('DOMContentLoaded', () => {
+  initCamo('Save Editor — UBGHyper');
+  setupNav();
+  setupDragDrop();
+  loadSaves();
+});
+
+function setupNav() {
+  // Phone menu: bound by camo.js. A second toggle here opened and shut it on every tap (2026-10-24).
+}
+
+// â”€â”€ Storage â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+const SYSTEM_KEYS = new Set([
+  'theme','ubg_fav','favorites','ubg_pt','ubg_recent','ubg_camo','ubg_filter','ubg_stats','ubg_focus','ubg_ratings','ubg_gamesData'
+]);
+
+function call(action, key, value) {
+  if (action === 'getAll') {
+    const r = {};
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (!isSiteKey(k)) r[k] = localStorage.getItem(k);
+    }
+    return Promise.resolve(r);
+  }
+  if (action === 'set')    { localStorage.setItem(key, value); return Promise.resolve(true); }
+  if (action === 'remove') { localStorage.removeItem(key);     return Promise.resolve(true); }
+  return Promise.resolve(null);
+}
+
+// â”€â”€ Utilities â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+function fmtSize(str) {
+  const b = new Blob([str || '']).size;
+  return b < 1024 ? b + ' B' : (b / 1024).toFixed(1) + ' KB';
+}
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// â”€â”€ Format detection â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+function detectFmt(value) {
+  if (!value) return 'empty';
+  if (value.includes(';!END!;')) return 'encoded';
+  const v = value.trim();
+  try { JSON.parse(v); return 'json'; } catch {}
+  if (v !== '' && !isNaN(v)) return 'number';
+  if (/^[0-9a-f]{32}$|^[0-9a-f]{40}$|^[0-9a-f]{64}$/i.test(v)) return 'hash';
+  if (/%[0-9A-Fa-f]{2}/.test(v)) {
+    try { if (decodeURIComponent(v) !== v) return 'urlenc'; } catch {}
+  }
+  if (v.length >= 20 && v.length % 4 === 0 && /^[A-Za-z0-9+/]+=*$/.test(v)) return 'b64';
+  return 'raw';
+}
+const FMT_LABEL = {
+  encoded: 'Base64 Â· Cookie Clicker', json: 'JSON', number: 'Number',
+  b64: 'Base64', hash: 'Hash', urlenc: 'URL-encoded', raw: 'Raw text', empty: 'Empty'
+};
+function fmtBadge(fmt) {
+  const defs = {
+    encoded: ['sv-badge-b64',  'b64' ],
+    b64:     ['sv-badge-b64',  'b64' ],
+    json:    ['sv-badge-json', 'json'],
+    hash:    ['sv-badge-hash', 'hash'],
+    urlenc:  ['sv-badge-url',  'url' ],
+    number:  ['sv-badge-num',  'num' ],
+  };
+  const d = defs[fmt];
+  return d ? `<span class="sv-badge ${d[0]}">${d[1]}</span>` : '';
+}
+function prettyJSON(str) {
+  try { return JSON.stringify(JSON.parse(str), null, 2); } catch { return str; }
+}
+function tryDecode(value) {
+  const raw = value.split(';!END!;')[0].trim();
+  try {
+    const b64 = atob(raw);
+    try { return unescape(b64); } catch { return b64; }
+  } catch { return null; }
+}
+function tryEncode(text) {
+  try { return btoa(escape(text)) + ';!END!;'; } catch {
+    try { return btoa(text) + ';!END!;'; } catch { return null; }
+  }
+}
+
+// â”€â”€ Cookie Clicker save parser â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+function parseCookieClicker(decoded) {
+  if (!decoded) return null;
+  const parts = decoded.split('|');
+  if (parts.length < 4) return null;
+  const f = (parts[2] || '').split(';');
+  if (f.length < 6) return null;
+  if (!/^[\d.]+$/.test(f[0] || '')) return null;
+  return { version: f[0], name: f[3] || '', cookies: f[4] || '0', cookiesBaked: f[5] || '0', parts, f };
+}
+function ccRebuild(info, name, cookies, cookiesBaked) {
+  const f = [...info.f];
+  f[3] = name; f[4] = String(cookies); f[5] = String(cookiesBaked);
+  const parts = [...info.parts];
+  parts[2] = f.join(';');
+  return parts.join('|');
+}
+function isPrintable(str) {
+  const n = Math.min(str.length, 512);
+  let p = 0;
+  for (let i = 0; i < n; i++) {
+    const c = str.charCodeAt(i);
+    if ((c >= 32 && c < 127) || c === 9 || c === 10 || c === 13) p++;
+  }
+  return n === 0 || p / n > 0.85;
+}
+function hexDump(str) {
+  const MAX = 384, len = Math.min(str.length, MAX);
+  const lines = [];
+  for (let i = 0; i < len; i += 16) {
+    const bytes = [];
+    for (let j = i; j < Math.min(i + 16, len); j++) bytes.push(str.charCodeAt(j));
+    const hex   = bytes.map(b => b.toString(16).padStart(2,'0')).join(' ');
+    const ascii = bytes.map(b => (b >= 32 && b < 127) ? String.fromCharCode(b) : '.').join('');
+    lines.push(`${i.toString(16).padStart(6,'0')}  ${hex.padEnd(47)}  ${ascii}`);
+  }
+  if (str.length > MAX) lines.push(`\n… ${str.length - MAX} more bytes`);
+  return lines.join('\n');
+}
+
+// â”€â”€ Grouping â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+function groupKeys(keys) {
+  const PREFIX_RE = /^([A-Za-z][A-Za-z0-9]{2,})[._\-\/]/;
+  const raw = new Map();
+  for (const key of keys) {
+    const m = key.match(PREFIX_RE);
+    const g = m ? m[1].toLowerCase() : '';
+    if (!raw.has(g)) raw.set(g, []);
+    raw.get(g).push(key);
+  }
+  const result = new Map([['', []]]);
+  for (const [g, ks] of raw) {
+    if (g && ks.length >= 2) result.set(g, ks);
+    else result.get('').push(...ks);
+  }
+  if (!result.get('').length) result.delete('');
+  return result;
+}
+
+// â”€â”€ State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+let allSaves        = {};
+let selectedKey     = null;
+let rawValue        = '';
+let currentViewMode = 'raw';
+let searchQuery     = '';
+let collapsedGroups = new Set();
+
+// â”€â”€ List rendering â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+function renderList() {
+  const listEl = document.getElementById('savesList');
+  const q = searchQuery.toLowerCase().trim();
+  const allKeys = Object.keys(allSaves).sort();
+  const visible = q
+    ? allKeys.filter(k => k.toLowerCase().includes(q) || String(allSaves[k] || '').toLowerCase().includes(q))
+    : allKeys;
+
+  if (!visible.length) {
+    listEl.innerHTML = q
+      ? '<p class="sv-empty">No saves match your search.</p>'
+      : '<p class="sv-empty">No game saves found yet.<br>Play a game and come back!</p>';
+    return;
+  }
+
+  const groups = groupKeys(visible);
+  const sortedGroups = [...groups.keys()].sort((a, b) => {
+    if (a === '') return 1; if (b === '') return -1; return a.localeCompare(b);
+  });
+
+  let html = '';
+  for (const g of sortedGroups) {
+    const ks = groups.get(g);
+    const items = ks.map(k => {
+      const fmt = detectFmt(allSaves[k]);
+      return `<button class="sv-item${k === selectedKey ? ' active' : ''}" data-key="${escHtml(k)}">
+        <span class="sv-item-name">${escHtml(k)}${fmtBadge(fmt)}</span>
+        <span class="sv-item-meta">${fmtSize(allSaves[k])}</span>
+      </button>`;
+    }).join('');
+
+    if (!g) {
+      html += items;
+    } else {
+      const collapsed = !q && collapsedGroups.has(g);
+      html += `<div class="sv-group${collapsed ? ' collapsed' : ''}" data-group="${escHtml(g)}">
+        <button class="sv-group-hd">
+          <svg class="sv-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="sv-group-name">${escHtml(g)}</span>
+          <span class="sv-group-count">${ks.length}</span>
+        </button>
+        <div class="sv-group-body">${items}</div>
+      </div>`;
+    }
+  }
+
+  listEl.innerHTML = html;
+
+  listEl.querySelectorAll('.sv-item').forEach(btn =>
+    btn.addEventListener('click', () => selectKey(btn.dataset.key)));
+
+  listEl.querySelectorAll('.sv-group-hd').forEach(btn =>
+    btn.addEventListener('click', () => {
+      const grpEl = btn.parentElement;
+      const g = grpEl.dataset.group;
+      if (collapsedGroups.has(g)) { collapsedGroups.delete(g); grpEl.classList.remove('collapsed'); }
+      else                         { collapsedGroups.add(g);    grpEl.classList.add('collapsed'); }
+    })
+  );
+}
+
+// â”€â”€ Load saves â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+async function loadSaves() {
+  document.getElementById('savesList').innerHTML = '<p class="sv-empty">Loading…</p>';
+  document.getElementById('savesCount').textContent = '—';
+
+  const raw = await call('getAll');
+  allSaves = raw || {};
+  const count = Object.keys(allSaves).length;
+  document.getElementById('savesCount').textContent = count;
+
+  document.getElementById('backupBtns').style.display = count ? 'flex' : 'none';
+
+  renderList();
+  if (selectedKey && allSaves[selectedKey] !== undefined) selectKey(selectedKey);
+}
+
+// â”€â”€ Select a key â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+function selectKey(key) {
+  selectedKey = key;
+  rawValue = allSaves[key] ?? '';
+  const fmt = detectFmt(rawValue);
+
+  document.querySelectorAll('.sv-item').forEach(b =>
+    b.classList.toggle('active', b.dataset.key === key));
+
+  document.getElementById('savesPlaceholder').style.display = 'none';
+  document.getElementById('savesEditor').style.display = '';
+  document.getElementById('editorKey').textContent = key;
+  document.getElementById('editorMeta').textContent =
+    (FMT_LABEL[fmt] || fmt) + ' Â· ' + fmtSize(rawValue);
+
+  setupView(fmt);
+}
+
+// â”€â”€ Editor view â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+function setupView(fmt) {
+  const decodeBar = document.getElementById('decodeBar');
+  const textarea  = document.getElementById('savesTextarea');
+  const infoEl    = document.getElementById('savesInfo');
+
+  textarea.readOnly = false;
+  textarea.style.minHeight = '';
+  infoEl.style.display = 'none';
+  decodeBar.style.display = 'none';
+  decodeBar.innerHTML = '';
+  currentViewMode = 'raw';
+
+  const ccPanel = document.getElementById('ccPanel');
+  ccPanel.style.display = 'none';
+
+  if (fmt === 'encoded') {
+    const dec = tryDecode(rawValue);
+    const ccInfo = dec ? parseCookieClicker(dec) : null;
+
+    if (ccInfo) {
+      document.getElementById('ccName').value    = ccInfo.name;
+      document.getElementById('ccCookies').value = ccInfo.cookies;
+      document.getElementById('ccBaked').value   = ccInfo.cookiesBaked;
+      ccPanel.style.display = '';
+
+      document.getElementById('ccApplyBtn').onclick = async () => {
+        const name    = document.getElementById('ccName').value.trim();
+        const cookies = document.getElementById('ccCookies').value.trim();
+        const baked   = document.getElementById('ccBaked').value.trim();
+        const newDecoded = ccRebuild(ccInfo, name, cookies, baked);
+        const newRaw     = tryEncode(newDecoded);
+        if (!newRaw) { setStatus('Encode failed.', 'err'); return; }
+        await call('set', selectedKey, newRaw);
+        allSaves[selectedKey] = newRaw;
+        rawValue = newRaw;
+        setStatus('Saved. Reload Cookie Clicker to see changes.', 'ok');
+        renderList();
+      };
+      textarea.style.minHeight = '160px';
+    }
+
+    const decPretty = dec !== null
+      ? ((dec.trim().startsWith('{') || dec.trim().startsWith('[')) ? prettyJSON(dec) : dec)
+      : null;
+    buildTabs([
+      { id:'decoded', label: ccInfo ? 'Advanced: full decoded' : 'Decoded', content: decPretty ?? rawValue, mode:'decoded' },
+      { id:'raw',     label:'Raw Base64', content: rawValue, mode:'raw' },
+    ], ccInfo ? 'raw' : 'decoded', textarea, decodeBar);
+
+  } else if (fmt === 'b64') {
+    let decoded = null;
+    try { decoded = atob(rawValue.trim()); } catch {}
+    if (decoded !== null && isPrintable(decoded)) {
+      buildTabs([
+        { id:'decoded', label:'Decoded',    content: decoded,  mode:'decoded' },
+        { id:'raw',     label:'Raw Base64', content: rawValue, mode:'raw'     },
+      ], 'decoded', textarea, decodeBar);
+    } else if (decoded !== null) {
+      buildTabs([
+        { id:'hex', label:'Hex View',   content: hexDump(decoded), mode:'hex', readOnly: true },
+        { id:'raw', label:'Raw Base64', content: rawValue,          mode:'raw' },
+      ], 'raw', textarea, decodeBar);
+      infoEl.textContent = 'Binary data — likely a Flash SharedObject (Ruffle). Edit Raw Base64 to modify.';
+      infoEl.style.display = '';
+    } else {
+      textarea.value = rawValue;
+    }
+
+  } else if (fmt === 'urlenc') {
+    let dec = rawValue;
+    try { dec = decodeURIComponent(rawValue); } catch {}
+    if (dec !== rawValue) {
+      buildTabs([
+        { id:'decoded', label:'Decoded', content: dec,      mode:'decoded' },
+        { id:'raw',     label:'Raw',     content: rawValue, mode:'raw'     },
+      ], 'decoded', textarea, decodeBar);
+    } else {
+      textarea.value = rawValue;
+    }
+
+  } else if (fmt === 'hash') {
+    const kind = rawValue.length === 32 ? 'MD5' : rawValue.length === 40 ? 'SHA-1' : 'SHA-256';
+    infoEl.textContent = `${kind} checksum — generated by the game as an anti-tamper check. This is not your save data. Editing it will break the save. Read-only.`;
+    infoEl.style.display = '';
+    textarea.value = rawValue;
+    textarea.readOnly = true;
+
+  } else if (fmt === 'json') {
+    textarea.value = prettyJSON(rawValue);
+  } else {
+    textarea.value = rawValue;
+  }
+}
+
+function buildTabs(tabs, defaultId, textarea, barEl) {
+  barEl.style.display = '';
+  barEl.innerHTML = tabs.map(t =>
+    `<button class="sv-tab${t.id === defaultId ? ' active' : ''}" data-tab="${escHtml(t.id)}">${escHtml(t.label)}</button>`
+  ).join('');
+
+  const map = {};
+  tabs.forEach(t => { map[t.id] = t; });
+
+  const def = map[defaultId];
+  textarea.value    = def.content;
+  textarea.readOnly = !!def.readOnly;
+  currentViewMode   = def.mode;
+
+  barEl.querySelectorAll('.sv-tab').forEach(btn =>
+    btn.addEventListener('click', () => {
+      barEl.querySelectorAll('.sv-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const t = map[btn.dataset.tab];
+      textarea.value    = t.content;
+      textarea.readOnly = !!t.readOnly;
+      currentViewMode   = t.mode;
+    })
+  );
+}
+
+// â”€â”€ Search â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+document.getElementById('savesSearch').addEventListener('input', e => {
+  searchQuery = e.target.value;
+  renderList();
+});
+
+// â”€â”€ Save â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+document.getElementById('saveBtn').addEventListener('click', async () => {
+  if (!selectedKey) return;
+  const fmt = detectFmt(rawValue);
+  let newValue = document.getElementById('savesTextarea').value;
+
+  if (currentViewMode === 'hex') {
+    setStatus('Switch to Raw Base64 to edit binary saves.', 'err'); return;
+  }
+  if (currentViewMode === 'decoded') {
+    if (fmt === 'encoded') {
+      const enc = tryEncode(newValue);
+      if (!enc) { setStatus('Encode failed — non-Latin characters.', 'err'); return; }
+      newValue = enc;
+    } else if (fmt === 'b64') {
+      try { newValue = btoa(newValue); } catch { setStatus('Encode failed.', 'err'); return; }
+    } else if (fmt === 'urlenc') {
+      try { newValue = encodeURIComponent(newValue); } catch { setStatus('Encode failed.', 'err'); return; }
+    }
+  } else if (currentViewMode === 'raw' && fmt === 'json') {
+    try { newValue = JSON.stringify(JSON.parse(newValue)); } catch {}
+  }
+
+  await call('set', selectedKey, newValue);
+  allSaves[selectedKey] = newValue;
+  rawValue = newValue;
+  setStatus('Saved.', 'ok');
+  renderList();
+});
+
+// â”€â”€ Copy â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+document.getElementById('copyBtn').addEventListener('click', () => {
+  navigator.clipboard.writeText(document.getElementById('savesTextarea').value)
+    .then(() => setStatus('Copied to clipboard.', 'ok'))
+    .catch(() => setStatus('Copy failed — select and copy manually.', 'err'));
+});
+
+// â”€â”€ Delete â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+document.getElementById('deleteBtn').addEventListener('click', async () => {
+  if (!selectedKey) return;
+  if (!confirm(`Delete "${selectedKey}"?\n\nThis cannot be undone.`)) return;
+  await call('remove', selectedKey);
+  delete allSaves[selectedKey];
+  selectedKey = null;
+  document.getElementById('savesPlaceholder').style.display = '';
+  document.getElementById('savesEditor').style.display = 'none';
+  document.getElementById('savesCount').textContent = Object.keys(allSaves).length;
+  renderList();
+  setStatus('Deleted.', 'ok');
+});
+
+// â”€â”€ Export â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+document.getElementById('exportBtn').addEventListener('click', async () => {
+  const data = await call('getAll');
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }));
+  a.download = `ubghyper-saves-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  // Some games keep a login in their save data, so a backup can let someone into an account.
+  setStatus(`Exported ${Object.keys(data).length} save${Object.keys(data).length !== 1 ? 's' : ''}. Keep the file private: it can include game logins.`, 'ok');
+});
+
+// â”€â”€ Import â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+document.getElementById('importFile').addEventListener('change', async e => {
+  const file = e.target.files[0];
+  e.target.value = '';
+  if (file) await importFile(file);
+});
+
+// A backup only ever holds game saves: Export leaves out the site's own keys (SYSTEM_KEYS). Import used to
+// write every key in the file, so a "save file" passed around on Discord could plant site data, e.g. a
+// ubg_pt entry whose name the Stats page then rendered as HTML (fixed 2026-10-24), or turn site
+// settings on and off. Site keys in a file are now skipped, never written.
+const MAX_IMPORT_BYTES = 25 * 1024 * 1024;
+function isSiteKey(k) {
+  return SYSTEM_KEYS.has(k) || /^ubg[_-]/i.test(k) || k === 'theme' || k === 'favorites';
+}
+
+async function importFile(file) {
+  if (file.size > MAX_IMPORT_BYTES) {
+    setStatus('That file is too big to be a UBGHyper backup.', 'err');
+    return;
+  }
+  let data;
+  try {
+    data = JSON.parse(await file.text());
+    if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error();
+  } catch {
+    setStatus('Import failed: not a valid UBGHyper backup.', 'err');
+    return;
+  }
+  const entries = Object.entries(data).filter(([k, v]) => typeof v === 'string' && k && !isSiteKey(k));
+  const skipped = Object.keys(data).length - entries.length;
+  if (!entries.length) {
+    setStatus('No game saves found in that file.', 'err');
+    return;
+  }
+  const existing = await call('getAll');
+  const overwrites = entries.filter(([k]) => k in existing).length;
+  const msg = `Restore ${entries.length} save${entries.length !== 1 ? 's' : ''} from "${file.name}"?` +
+    (overwrites ? `\n\n${overwrites} of them will replace saves you already have.` : '') +
+    '\n\nOnly import backups you made yourself. A file from someone else can change your saves.';
+  if (!confirm(msg)) return;
+  let count = 0;
+  try {
+    for (const [k, v] of entries) { await call('set', k, v); count++; }
+  } catch {
+    await loadSaves();
+    setStatus(`Storage is full: restored ${count} of ${entries.length} saves.`, 'err');
+    return;
+  }
+  await loadSaves();
+  setStatus(`Restored ${count} save${count !== 1 ? 's' : ''}` + (skipped ? ` (skipped ${skipped} non-save entr${skipped !== 1 ? 'ies' : 'y'}).` : '.'), 'ok');
+}
+
+// â”€â”€ Drag-drop import â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+function setupDragDrop() {
+  const overlay = document.getElementById('dropOverlay');
+  let depth = 0;
+
+  window.addEventListener('dragenter', e => {
+    if (!e.dataTransfer?.types?.includes('Files')) return;
+    depth++;
+    overlay.classList.add('show');
+    overlay.setAttribute('aria-hidden', 'false');
+  });
+  window.addEventListener('dragleave', e => {
+    depth = Math.max(0, depth - 1);
+    if (depth === 0) {
+      overlay.classList.remove('show');
+      overlay.setAttribute('aria-hidden', 'true');
+    }
+  });
+  window.addEventListener('dragover', e => { e.preventDefault(); });
+  window.addEventListener('drop', async e => {
+    e.preventDefault();
+    depth = 0;
+    overlay.classList.remove('show');
+    overlay.setAttribute('aria-hidden', 'true');
+    const file = e.dataTransfer?.files?.[0];
+    if (!file) return;
+    if (!file.name.endsWith('.json') && file.type !== 'application/json') {
+      setStatus('Only .json backup files can be imported.', 'err');
+      return;
+    }
+    await importFile(file);
+  });
+}
+
+// â”€â”€ Status toast â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+let statusTimer = null;
+function setStatus(msg, kind) {
+  const el = document.getElementById('saveStatus');
+  if (!el) return;
+  el.textContent = msg;
+  el.classList.remove('err', 'ok');
+  if (kind) el.classList.add(kind);
+  el.classList.add('show');
+  clearTimeout(statusTimer);
+  statusTimer = setTimeout(() => { el.classList.remove('show'); }, 3500);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+name: Update ads.txt
+
+# ads.txt is generated, never hand-edited. GitHub Pages can't redirect /ads.txt
+# to a network's ads.txt manager, so this copies Pubfuture's list in hourly (its
+# partner list changes often, and a stale copy means fewer bidders) and then
+# appends scripts/ads-txt-extra.txt, where any other network's lines live.
+on:
+  schedule:
+    # Hourly: Pubfuture adds partners as it submits the site to new demand, and ads
+    # missing from ads.txt mean those bidders cannot bid (2026-10-01: 18 new lines sat
+    # unsynced for most of a day on the old daily schedule; 2026-10-08: 10 more waited
+    # on the 6-hourly one). GitHub Pages cannot serve the 301 redirect Pubfuture's
+    # dynamic ads.txt wants, so this copy is the substitute; scheduled runs can lag
+    # by 15-60 minutes, so the real worst case is a little over an hour.
+    - cron: '17 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/ads-txt-extra.txt
+      - .github/workflows/update-ads-txt.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-ads-txt
+  cancel-in-progress: false
+
+jobs:
+  update-ads-txt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild ads.txt from Pubfuture + extras
+        run: |
+          set -euo pipefail
+          SRC="https://adstxt-ssp.pubfuture.com/site/6ab66232727ae7003ca623e6/ubghyper.github.io/ads.txt"
+
+          STATUS=$(curl -sL --max-time 60 -o /tmp/pubfuture.txt -w "%{http_code}" "$SRC" || echo 000)
+          if [ "$STATUS" != "200" ]; then
+            echo "Pubfuture returned $STATUS — leaving the committed ads.txt untouched."
+            exit 0
+          fi
+          tr -d '\r' < /tmp/pubfuture.txt > /tmp/pf.txt
+
+          # Only trust a download that carries our own account line. An error
+          # page or a wrong-account file must never replace a working ads.txt.
+          if ! grep -qiE '^pubfuture\.com\s*,\s*6ab66232727ae7003ca623e6\s*,\s*DIRECT' /tmp/pf.txt; then
+            echo "Download is missing our Pubfuture DIRECT line — leaving ads.txt untouched."
+            exit 0
+          fi
+
+          EXTRA=$( (grep -vE '^\s*(#|$)' scripts/ads-txt-extra.txt 2>/dev/null || true) | tr -d '\r')
+          {
+            echo "# ads.txt for ubghyper.github.io"
+            echo "# Generated every 6 hours by .github/workflows/update-ads-txt.yml. Do not edit by hand:"
+            echo "# Pubfuture's list is replaced on every run. Other networks go in scripts/ads-txt-extra.txt."
+            echo
+            sed -e '$a\' /tmp/pf.txt
+            if [ -n "$EXTRA" ]; then
+              echo
+              echo "# --- other networks (scripts/ads-txt-extra.txt) ---"
+              echo "$EXTRA"
+            fi
+          } > /tmp/ads.txt
+
+          if cmp -s /tmp/ads.txt ads.txt; then
+            echo "ads.txt unchanged."
+            exit 0
+          fi
+          cp /tmp/ads.txt ads.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ads.txt
+          git commit -m "Sync ads.txt from Pubfuture"
+          git pull --rebase
+          git push

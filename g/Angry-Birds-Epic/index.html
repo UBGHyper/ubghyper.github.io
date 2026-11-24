@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+<base href="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist10.github.io@d5fea0594796d79bcba69576156b82e2d22ab2d1/Angry-Birds-Epic/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>/* ubg-parts: files over jsDelivr's 20 MB limit are fetched as parts and joined */(function(){var GAME="https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist10.github.io@d5fea0594796d79bcba69576156b82e2d22ab2d1/Angry-Birds-Epic/",PARTS="https://cdn.jsdelivr.net/gh/freeonlinewebtools/ubg-parts1@709ca8639503810477163f7a633631dc0e182605/gamelist10.github.io/Angry-Birds-Epic/",MAP={"Build/EpicWeb.data.part1":{"n":5,"type":"application/octet-stream"},"Build/EpicWeb.data.part2":{"n":3,"type":"application/octet-stream"},"Build/EpicWeb.wasm":{"n":2,"type":"application/wasm"}};var g=new URL(GAME),gp=g.pathname;function relOf(u){try{var x=new URL(u,document.baseURI);if(x.origin!==g.origin||x.pathname.indexOf(gp)!==0)return null;var r=decodeURIComponent(x.pathname.slice(gp.length));return Object.prototype.hasOwnProperty.call(MAP,r)?r:null}catch(e){return null}}var nf=window.fetch.bind(window),cache={};function joined(rel){if(!cache[rel]){var m=MAP[rel],ps=[];for(var i=1;i<=m.n;i++)ps.push(nf(PARTS+rel+".p"+("00"+i).slice(-3)).then(function(r){if(!r.ok)throw new Error("part HTTP "+r.status);return r.blob()}));cache[rel]=Promise.all(ps).then(function(b){return new Blob(b,{type:m.type})});cache[rel].catch(function(){delete cache[rel]})}return cache[rel]}window.fetch=function(input,init){var u=typeof input==="string"?input:(input&&input.url)||String(input);var rel=relOf(u);if(!rel)return nf(input,init);return joined(rel).then(function(b){return new Response(b,{status:200,headers:{"Content-Type":MAP[rel].type,"Content-Length":String(b.size)}})})};var X=window.XMLHttpRequest;function P(){var x=new X(),d=null,h=[],o=x.open,sh=x.setRequestHeader,se=x.send;x.open=function(m,u){var rel=relOf(String(u));if(rel){d={m:m,rel:rel};return}d=null;return o.apply(x,arguments)};x.setRequestHeader=function(n,v){if(d){h.push([n,v]);return}return sh.call(x,n,v)};x.send=function(body){if(!d)return se.call(x,body);var dd=d;joined(dd.rel).then(function(b){o.call(x,dd.m,URL.createObjectURL(b),true);h.forEach(function(p){try{sh.call(x,p[0],p[1])}catch(e){}});se.call(x,body)},function(){try{x.dispatchEvent(new Event("error"))}catch(e){}})};return x}P.prototype=X.prototype;["UNSENT","OPENED","HEADERS_RECEIVED","LOADING","DONE"].forEach(function(k){P[k]=X[k]});window.XMLHttpRequest=P;})();</script>
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+<script>
+/* ubg-split-parts: GitHub Pages refuses files over 100 MB, so these were split
+   into .partN files. Requests for the original URL get the joined parts. */
+(function () {
+  var PARTS = {"Build/EpicWeb.data":["Build/EpicWeb.data.part1","Build/EpicWeb.data.part2"]};
+  var joined = {};
+  function key(u) {
+    u = String(u || '').split(/[?#]/)[0];
+    for (var k in PARTS) if (u === k || u.slice(-k.length - 1) === '/' + k) return k;
+    return null;
+  }
+  var realFetch = window.fetch.bind(window);
+  function join(k) {
+    return joined[k] || (joined[k] = Promise.all(PARTS[k].map(function (p) {
+      return realFetch(p).then(function (r) { if (!r.ok) throw new Error(p + ' HTTP ' + r.status); return r.arrayBuffer(); });
+    })).then(function (bufs) { return new Blob(bufs); }));
+  }
+  window.fetch = function (input, init) {
+    var k = key(typeof input === 'string' ? input : input && input.url);
+    if (!k) return realFetch(input, init);
+    return join(k).then(function (b) {
+      return new Response(b, { status: 200, headers: { 'Content-Type': 'application/octet-stream', 'Content-Length': String(b.size) } });
+    });
+  };
+})();
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity Web Player | Epic</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+  </head>
+  <body>
+    <div id="unity-container">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"> </div>
+    </div>
+    <script>
+      window.addEventListener("load", function () {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("ServiceWorker.js");
+        }
+      });
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      // Shows a temporary message banner/ribbon for a few seconds, or
+      // a permanent error message on top of the canvas if type=='error'.
+      // If type=='warning', a yellow highlight color is used.
+      // Modify or remove this function to customize the visually presented
+      // way that non-critical warnings and error messages are presented to the
+      // user.
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+        }
+        var div = document.createElement('div');
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        else {
+          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
+          setTimeout(function() {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/EpicWeb.loader.js";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/EpicWeb.data",
+        frameworkUrl: buildUrl + "/EpicWeb.framework.js",
+        codeUrl: buildUrl + "/EpicWeb.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Rovio Entertainment Ltd.",
+        productName: "Epic",
+        productVersion: "3.0.1",
+        showBanner: unityShowBanner,
+        // errorHandler: function(err, url, line) {
+        //    alert("error " + err + " occurred at line " + line);
+        //    // Return 'true' if you handled this error and don't want Unity
+        //    // to process it further, 'false' otherwise.
+        //    return true;
+        // },
+      };
+
+      // By default Unity keeps WebGL canvas render target size matched with
+      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+      // Set this to false if you want to decouple this synchronization from
+      // happening inside the engine, and you would instead like to size up
+      // the canvas DOM size and WebGL render target sizes yourself.
+      // config.matchWebGLToCanvasSize = false;
+
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Mobile device style: fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+      }
+
+
+      loadingBar.style.display = "block";
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          progressBarFull.style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          loadingBar.style.display = "none";
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

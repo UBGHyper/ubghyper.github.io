@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- PRIVATE DEBUG PAGE — keep noindex, do not link from anywhere -->
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ad Test Bench — UBGHyper (debug)</title>
+<style>
+  :root{--accent:#f07220;--bg:#15151a;--card:#1e1e24;--border:#33333d;--text:#e8e8e8;--muted:#9a9aa3;}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--text);padding:24px;line-height:1.5}
+  .wrap{max-width:920px;margin:0 auto}
+  h1{font-size:1.45rem;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:.85rem;margin:0 0 18px}
+  .banner{padding:10px 14px;border-radius:8px;font-size:.85rem;margin:0 0 14px;border:1px solid var(--border)}
+  .warn{background:#3a2a12;border-color:var(--accent);color:#ffce9e}
+  .ok{background:#13301a;border-color:#3a7a4a;color:#a9e8bb}
+  .err{background:#3a1414;border-color:#a14;color:#f3a9a9}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;margin:0 0 20px}
+  .card h2{font-size:1.02rem;margin:0 0 3px;color:var(--accent)}
+  .tag{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#0d0d10;border:1px solid var(--border);color:var(--muted);padding:2px 7px;border-radius:99px;margin-left:6px;vertical-align:middle}
+  .meta{font-size:.74rem;color:var(--muted);margin:6px 0 14px;font-family:ui-monospace,Menlo,Consolas,monospace;word-break:break-all}
+  .slot{min-height:70px;display:flex;align-items:center;justify-content:center;background:#0d0d10;border:1px dashed var(--border);border-radius:8px;padding:12px}
+  .note{font-size:.8rem;color:var(--muted);margin-top:12px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:9px 16px;border-radius:8px;font-weight:600;border:0;cursor:pointer;font-size:.86rem;transition:filter .15s}
+  .btn:hover{filter:brightness(1.1)}
+  .btn.secondary{background:#2a2a32;border:1px solid var(--border)}
+  code{background:#0d0d10;padding:1px 5px;border-radius:4px;font-size:.82em;color:#ffce9e}
+  #flash{position:fixed;right:16px;bottom:16px;max-width:340px;z-index:2147483646}
+  #flash div{background:#1e1e24;border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:9px 12px;margin-top:8px;font-size:.8rem;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+  #flash div.bad{border-left-color:#e85252}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🧪 Ad Network Test Bench</h1>
+  <p class="sub">Private debug page (<code>noindex</code>, unlinked). Loads your live ad zones on the real domain so you can see each format render. Delete <code>ad-test.html</code> when you're done.</p>
+
+  <div id="abstatus" class="banner warn">Checking for an ad blocker in this browser…</div>
+  <div class="banner warn"><b>Heads up:</b> the script formats (Monetag vignette/tag, Adcash AutoTag) and the direct link intentionally overlay the page or pop a new tab on click — that's why they're behind buttons, so they don't all fire at once. The A-ADS banner below loads on its own.</div>
+
+  <!-- ───────────── A-ADS inline banner (auto-loads) ───────────── -->
+  <div class="card">
+    <h2>A-ADS — Adaptive banner<span class="tag">auto-loads · iframe</span></h2>
+    <p class="meta">network: A-ADS · unit 2441205 · iframe (first-party-ish, crypto-paid) · hardest to ad-block</p>
+    <div class="slot">
+      <div style="width:100%;margin:auto">
+        <iframe title="A-ADS banner" data-aa="2441205" src="//acceptable.a-ads.com/2441205/?size=Adaptive"
+                style="border:0;padding:0;width:100%;height:100px;overflow:hidden;display:block;margin:auto"></iframe>
+      </div>
+    </div>
+    <p class="note">This is your cleanest always-approves slot. If it's blank, it's usually low fill (crypto demand), not a bug. <button class="btn secondary" onclick="showSticky()">Show sticky variant</button></p>
+  </div>
+
+  <!-- ───────────── Monetag Vignette ───────────── -->
+  <div class="card">
+    <h2>Monetag — Vignette banner<span class="tag">click to load</span></h2>
+    <p class="meta">network: Monetag · zone 11100126 · n6wxm.com/vignette.min.js · full-screen interstitial on navigation/click</p>
+    <div class="slot"><button class="btn" onclick="injectScript('https://n6wxm.com/vignette.min.js','11100126','Monetag Vignette')">▶ Load vignette tag</button></div>
+    <p class="note">After loading, click anywhere on the page — the vignette appears as a full-screen ad with a close timer. Decent CPM, moderately intrusive.</p>
+  </div>
+
+  <!-- ───────────── Monetag Tag (in-page push / multitag) ───────────── -->
+  <div class="card">
+    <h2>Monetag — Tag (in-page push / MultiTag)<span class="tag">click to load</span></h2>
+    <p class="meta">network: Monetag · zone 11100127 · nap5k.com/tag.min.js · small in-page push-style unit</p>
+    <div class="slot"><button class="btn" onclick="injectScript('https://nap5k.com/tag.min.js','11100127','Monetag Tag')">▶ Load tag</button></div>
+    <p class="note">Shows a small push-notification-style ad in a corner. In-page push isn't stopped by notification permissions, but adblockers can still hit the script.</p>
+  </div>
+
+  <!-- ───────────── Monetag direct link / smartlink ───────────── -->
+  <div class="card">
+    <h2>Monetag — Direct link / SmartLink<span class="tag">opens new tab</span></h2>
+    <p class="meta">network: Monetag · https://omg10.com/4/11100125 · onclick/popunder destination URL</p>
+    <div class="slot"><button class="btn" onclick="window.open('https://omg10.com/4/11100125','_blank','noopener')">▶ Open direct link</button></div>
+    <p class="note">This is the URL you'd wire to a "play"/onclick popunder. It routes to the highest-bidding offer. Highest CPM of the bunch, most intrusive — best used sparingly (e.g. one popunder per session).</p>
+  </div>
+
+  <!-- ───────────── Adcash AutoTag ───────────── -->
+  <div class="card">
+    <h2>Adcash — AutoTag<span class="tag">click to load</span></h2>
+    <p class="meta">network: Adcash · zoneId 8i7ensluby · aclib.runAutoTag · auto-picks popunder/interstitial</p>
+    <div class="slot"><button class="btn" onclick="loadAdcash()">▶ Load Adcash AutoTag</button></div>
+    <p class="note">Loads Adcash's <code>aclib.js</code> then runs AutoTag (fires on your next click). If it errors, your Adcash dashboard may give a different library URL than <code>acscdn.com/script/aclib.js</code> — paste that one in and I'll fix it. <b>Recommendation: don't deploy AutoTag — too intrusive/uncontrolled. Use the manual formats below.</b></p>
+  </div>
+
+  <!-- ───────────── Adcash In-Page Push (new zone) ───────────── -->
+  <div class="card">
+    <h2>Adcash — In-Page Push<span class="tag">click to load</span></h2>
+    <p class="meta">network: Adcash · zoneId 11394922 · aclib.runInPagePush(maxAds:2) · small push-style ad, low-intrusive</p>
+    <div class="slot"><button class="btn" onclick="runPush()">▶ Load In-Page Push</button></div>
+    <p class="note">Small notification-style ad (works on any OS). Low-intrusive. Script-based, so ad-blockers can stop it. You also have a Monetag push — pick one, don't run both.</p>
+  </div>
+
+  <!-- ───────────── Adcash Video Slider (new zone) ───────────── -->
+  <div class="card">
+    <h2>Adcash — Video Slider<span class="tag">click to load · VIDEO</span></h2>
+    <p class="meta">network: Adcash · zoneId 11394934 · aclib.runVideoSlider · video ad slides into a corner, closeable</p>
+    <div class="slot"><button class="btn" onclick="runSlider()">▶ Load Video Slider</button></div>
+    <p class="note">A video ad that slides in from a corner after load, with a close button. Higher (video) CPM, needs no video content — <b>your best low-effort new format.</b></p>
+  </div>
+
+  <!-- ───────────── Adcash In-stream Video (VAST pre-roll) ───────────── -->
+  <div class="card">
+    <h2>Adcash — In-stream Video (VAST pre-roll)<span class="tag">click to play · VIDEO</span></h2>
+    <p class="meta">network: Adcash · VAST tag r=11394930 · video.js + Google IMA · skippable pre-roll</p>
+    <div class="slot" style="flex-direction:column;gap:10px;align-items:stretch">
+      <button class="btn" id="prerollBtn" onclick="loadPreroll()">▶ Play pre-roll video ad</button>
+      <div id="prerollHost" style="width:100%;max-width:640px;margin:0 auto;display:none"></div>
+    </div>
+    <p class="note"><b>This is the big one — your "pre-roll before the game" plan.</b> Loads a video player and requests a pre-roll from Adcash's VAST tag (the ocean clip is placeholder "content"; in production the content is your game). Video CPM is far higher than display. <b>Production: show this in a player in front of the game on ~1-in-4 loads, skippable after 5s.</b> Needs Google's IMA SDK, which ad-blockers may stop — so it earns from non-blockers, but video pays enough that it can still beat all your display combined. If the player shows but no ad plays, the VAST tag didn't fill (try again / clean browser).</p>
+  </div>
+
+  <p class="sub" style="margin-top:28px">Tip: open this in a <b>clean browser / incognito with no extensions</b> to see true fill. Then open it in your normal browser to see how much your own ad blocker strips — that's roughly what your ad-block-heavy audience sees too.</p>
+</div>
+
+<div id="flash"></div>
+
+<script>
+  function flash(msg, bad){
+    var f=document.getElementById('flash');
+    var d=document.createElement('div');
+    if(bad) d.className='bad';
+    d.textContent=msg;
+    f.appendChild(d);
+    setTimeout(function(){ d.style.opacity='0'; d.style.transition='opacity .4s'; setTimeout(function(){d.remove();},400); }, 4500);
+  }
+  function injectScript(src, zone, label){
+    var s=document.createElement('script');
+    if(zone) s.dataset.zone=zone;
+    s.src=src;
+    s.onload=function(){ flash(label+' loaded ✓ — click the page to trigger it'); };
+    s.onerror=function(){ flash(label+' FAILED — ad blocker or bad tag', true); };
+    document.body.appendChild(s);
+  }
+  function loadAdcash(){
+    var s=document.createElement('script');
+    s.src='//acscdn.com/script/aclib.js';
+    s.onload=function(){
+      try{ window.aclib.runAutoTag({ zoneId:'8i7ensluby' }); flash('Adcash AutoTag running ✓ — click the page to trigger'); }
+      catch(e){ flash('aclib loaded but runAutoTag errored: '+e.message, true); }
+    };
+    s.onerror=function(){ flash('Adcash aclib.js failed to load (blocked or wrong URL)', true); };
+    document.body.appendChild(s);
+  }
+  function showSticky(){
+    if(document.getElementById('aads-sticky')) return;
+    var wrap=document.createElement('div');
+    wrap.id='aads-sticky';
+    wrap.style.cssText='position:fixed;top:0;left:0;right:0;text-align:center;z-index:99999;background:rgba(13,13,16,.6);padding:6px';
+    wrap.innerHTML='<button onclick="this.parentNode.remove()" style="position:absolute;right:10px;top:6px;background:#f8f8f9b3;border:0;border-radius:4px;padding:3px 7px;cursor:pointer">✕</button>'+
+      '<iframe data-aa="2441205" src="//acceptable.a-ads.com/2441205/?size=Adaptive" style="border:0;width:70%;max-width:728px;height:90px;margin:auto;display:block"></iframe>';
+    document.body.appendChild(wrap);
+    flash('A-ADS sticky banner shown (top of page)');
+  }
+  // Ad-blocker self-check so a blank slot isn't mistaken for a broken tag
+  window.addEventListener('load', function(){
+    var bait=document.createElement('div');
+    bait.className='adsbox ad-banner ads ad-placement pub_300x250';
+    bait.style.cssText='position:absolute;height:10px;width:10px;left:-9999px;top:-9999px';
+    document.body.appendChild(bait);
+    setTimeout(function(){
+      var el=document.getElementById('abstatus');
+      var blocked = bait.offsetParent===null || bait.offsetHeight===0 || getComputedStyle(bait).display==='none';
+      if(blocked){ el.className='banner err'; el.innerHTML='⚠ <b>Ad blocker ACTIVE in this browser</b> — script ads (Monetag/Adcash) will be hidden here. This is also what a big chunk of your audience sees. Test in a clean/incognito browser for true fill.'; }
+      else { el.className='banner ok'; el.textContent='✓ No ad blocker detected in this browser — what you see here is real fill.'; }
+      bait.remove();
+    }, 200);
+  });
+
+  // ---- Adcash aclib (shared loader) + manual formats ----
+  function withAclib(cb){
+    if(window.aclib){ cb(); return; }
+    var existing=document.getElementById('aclib-lib');
+    if(existing){ existing.addEventListener('load', cb); return; }
+    var s=document.createElement('script');
+    s.id='aclib-lib'; s.src='//acscdn.com/script/aclib.js';
+    s.onload=function(){ flash('Adcash aclib loaded ✓'); cb(); };
+    s.onerror=function(){ flash('aclib failed to load (ad-blocker?)', true); };
+    document.body.appendChild(s);
+  }
+  function runPush(){ withAclib(function(){ try{ aclib.runInPagePush({zoneId:'11394922', maxAds:2}); flash('In-Page Push running ✓'); }catch(e){ flash('push error: '+e.message, true); } }); }
+  function runSlider(){ withAclib(function(){ try{ aclib.runVideoSlider({zoneId:'11394934'}); flash('Video Slider running ✓ — watch the corners'); }catch(e){ flash('slider error: '+e.message, true); } }); }
+
+  // ---- In-stream video pre-roll (video.js + Google IMA + Adcash VAST) ----
+  function loadCss(href){ var l=document.createElement('link'); l.rel='stylesheet'; l.href=href; document.head.appendChild(l); }
+  function loadJs(src){ return new Promise(function(res,rej){ var s=document.createElement('script'); s.src=src; s.onload=res; s.onerror=function(){ rej(new Error('failed: '+src)); }; document.head.appendChild(s); }); }
+  var prerollLibs=false;
+  function startPreroll(){
+    var host=document.getElementById('prerollHost');
+    host.innerHTML='<video id="my-video" class="video-js vjs-default-skin" controls playsinline preload="auto" width="640" height="360" style="width:100%"><source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></video>';
+    try{
+      var player=videojs('my-video');
+      player.ima({ adTagUrl:'https://youradexchange.com/video/select.php?r=11394930' });
+      player.ready(function(){ var p=player.play(); if(p&&p.catch){ p.catch(function(){ flash('autoplay blocked — press play on the player'); }); } });
+      document.getElementById('prerollBtn').textContent='▶ Replay pre-roll';
+      flash('Pre-roll requested — if it fills, the ad plays before the clip');
+    }catch(e){ flash('video/IMA error: '+e.message, true); }
+  }
+  function loadPreroll(){
+    document.getElementById('prerollHost').style.display='block';
+    if(prerollLibs){ startPreroll(); return; }
+    document.getElementById('prerollBtn').textContent='Loading video player…';
+    loadCss('https://vjs.zencdn.net/8.10.0/video-js.css');
+    loadCss('https://cdn.jsdelivr.net/npm/videojs-ima@2.1.0/dist/videojs.ima.css');
+    loadJs('https://imasdk.googleapis.com/js/sdkloader/ima3.js')
+      .then(function(){ return loadJs('https://vjs.zencdn.net/8.10.0/video.min.js'); })
+      .then(function(){ return loadJs('https://cdn.jsdelivr.net/npm/videojs-contrib-ads@7.5.2/dist/videojs-contrib-ads.min.js'); })
+      .then(function(){ return loadJs('https://cdn.jsdelivr.net/npm/videojs-ima@2.1.0/dist/videojs.ima.min.js'); })
+      .then(function(){ prerollLibs=true; startPreroll(); })
+      .catch(function(e){ flash('lib load failed ('+e.message+') — ad-blocker likely blocked the IMA SDK', true); document.getElementById('prerollBtn').textContent='▶ Play pre-roll video ad'; });
+  }
+</script>
+</body>
+</html>

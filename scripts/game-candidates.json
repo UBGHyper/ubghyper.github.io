@@ -1,0 +1,48 @@
+{
+ "note": "Research 2026-08-11. GitHub topic search (html5-game/webgl-game/webgpu/emscripten-game) returns ~1885 public repos but is dominated by ENGINES and templates, not playable games. Of 52 permissively-licensed hits, only the six below are droppable into an iframe. Topic mining is therefore low-precision and not a bulk source. js13kgames.com year pages are JS-rendered so entries are not in static HTML; mining it needs the GitHub org route (js13k requires open-source entries) or their API if one exists. itch.io HTML5+free is high-precision (every entry is a game) but mostly all-rights-reserved even when free, so bulk use recreates the current licence exposure; its sanctioned route is itch own iframe embed.",
+ "playable": {
+  "mumuy/pacman": {
+   "stars": 1637,
+   "lic": "MIT",
+   "size": 124,
+   "br": "master",
+   "desc": "基于HTML5的吃豆人游戏 - 经典游戏开发样例_Pacman based on HTML5"
+  },
+  "dmcinnes/HTML5-Asteroids": {
+   "stars": 353,
+   "lic": "MIT",
+   "size": 281,
+   "br": "master",
+   "desc": "Pure Javascript Asteroids"
+  },
+  "kenrick95/c4": {
+   "stars": 278,
+   "lic": "MIT",
+   "size": 10360,
+   "br": "master",
+   "desc": "🔴🔵 Connect Four game in JS + Canvas"
+  },
+  "RoyalUr/RoyalUr.net": {
+   "stars": 173,
+   "lic": "MIT",
+   "size": 4959,
+   "br": "main",
+   "desc": "Play The Royal Game of Ur online!"
+  },
+  "boona13/mykonos-island-voxels": {
+   "stars": 944,
+   "lic": "MIT",
+   "size": 81388,
+   "br": "main",
+   "desc": "A browser-based isometric island builder with the soft, su"
+  },
+  "111116/webosu": {
+   "stars": 651,
+   "lic": "MIT",
+   "size": 47260,
+   "br": "master",
+   "desc": "➤⓵ web rhythm game (unofficial osu!)"
+  }
+ },
+ "engines_rejected": 46
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<base href="https://cdn.jsdelivr.net/gh/UBGHyper/GameList.github.io@2892fc0e9813e7169cd0cc3a5885b3049ccb0e2b/Moto3XM/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+<script>/* ubg: block third-party ad, analytics and hotlink-check loaders added at runtime */(function(){var bad=/gamemonetize\.com|st39\/sdk|imasdk\.googleapis\.com|google-analytics\.com|googletagmanager\.com|static\.itch\.io\/htmlgame/i,E="data:text/javascript,";try{var P=HTMLScriptElement.prototype,d=Object.getOwnPropertyDescriptor(P,"src");Object.defineProperty(P,"src",{configurable:true,enumerable:d.enumerable,get:function(){return d.get.call(this)},set:function(v){d.set.call(this,bad.test(String(v))?E:v)}});var sa=Element.prototype.setAttribute;Element.prototype.setAttribute=function(n,v){if(this instanceof HTMLScriptElement&&String(n).toLowerCase()==="src"&&bad.test(String(v)))v=E;return sa.call(this,n,v)};}catch(e){}})();</script>
+<script>/* ubg: third-party analytics stubbed */window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){};window.ga=window.ga||function(){};</script>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+    <title>
+        MotoX3M
+    </title>
+
+</head>
+
+<body>
+    <div id="content"></div>
+    <div id="orientation"></div>
+    <div id="loader">Loading ...</div>
+    
+    <script type="text/javascript" src="assets/box2dweb/nape.min.js">
+        var nape = "nape.min.js";
+    </script>
+    <script type="text/javascript" src="assets/box2dweb/nape-debug-draw.min.js"></script>
+    <script type="text/javascript" src="assets/box2dweb/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/box2dweb/easeljs-0.8.2.combined.js"></script>
+    <script type="text/javascript" src="assets/box2dweb/bluebird.min.js"></script>
+
+
+    <script type="text/javascript">
+        var notIE11 = (typeof(Event) === 'function');
+
+        window["GD_OPTIONS"] = {
+            "gameId": "5b0abd4c0faa4f5eb190a9a16d5a1b4c",
+            "onEvent": function(event) {
+                switch (event.name) {
+                    case "SDK_GAME_START":
+                        // advertisement done, resume game logic and unmute audio
+                        var event;
+                        if (notIE11) {
+                            event = new Event("SDK_GAME_START");
+                        } else {
+                            event = document.createEvent('Event');
+                            event.initEvent('SDK_GAME_START', true, true);
+                        }
+                        document.getElementById("content").dispatchEvent(event);
+                        break;
+                    case "SDK_GAME_PAUSE":
+                        // pause game logic / mute audio
+                        var event;
+                        if (notIE11) {
+                            event = new Event("SDK_GAME_PAUSE");
+                        } else {
+                            event = document.createEvent('Event');
+                            event.initEvent('SDK_GAME_PAUSE', true, true);
+                        }
+                        document.getElementById("content").dispatchEvent(event);
+                        break;
+                    case "SDK_GDPR_TRACKING":
+                        // this event is triggered when your user doesn't want to be tracked
+                        console.log("SDK_GDPR_TRACKING");
+                        break;
+                    case "SDK_GDPR_TARGETING":
+                        // this event is triggered when your user doesn't want personalised targeting of ads and such
+                        console.log("SDK_GDPR_TARGETING");
+                        break;
+                    case "SDK_READY":
+                        // this event is triggered when your user doesn't want personalised targeting of ads and such
+                        console.log("SDK_READY");
+                        break;
+                }
+            },
+        };
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-60415712-15');
+    </script>
+    <script type="text/javascript" src="motox3m4.min.js?30ce0fae5b364628ca27"></script>
+</body>
+
+</html>

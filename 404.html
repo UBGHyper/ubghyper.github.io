@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>404 — Page Not Found | UBGHyper</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex">
+<!-- GitHub Pages serves this file at arbitrary paths, so location.pathname cannot
+     identify it. analytics.js reads this marker instead. -->
+<meta name="ubg-page-type" content="not_found">
+<link rel="icon" href="assets/img/icon/main.svg">
+<link rel="apple-touch-icon" href="assets/img/icon/main.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VE9J0CCHWZ"></script>
+<script src="/assets/js/analytics.js"></script>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/redesign.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">UBGHyper</a>
+  <div class="nav-links">
+    <a href="/">Games</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="stats.html">Stats</a>
+    <a href="saves.html">Saves</a>
+    <a href="about.html">About</a>
+    <a href="https://discord.gg/HAzcYC52Vt" target="_blank" rel="noopener" style="color:#5865F2;font-weight:600;text-decoration:none">Discord (Fixed)</a><a href="https://isotunnel.com/" target="_blank" rel="noopener" data-nav="isotunnel" style="color:var(--text);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px">isotunnel<span style="font-size:.74em;font-weight:500;color:var(--text);background:var(--surface-2,var(--border));border-radius:999px;padding:.15em .6em;line-height:1.3;white-space:nowrap">Out now</span></a>
+  </div>
+  <div class="camo-wrap">
+    <button class="camo-btn" id="camoBtn" title="Tab disguise (`)">
+      <svg class="icon" aria-hidden="true"><use href="#icon-mask"/></svg>
+    </button>
+    <div class="camo-dropdown" id="camoDropdown"></div>
+  </div>
+  <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+    <svg class="icon" aria-hidden="true"><use href="#icon-sun"/></svg>
+  </button>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation" aria-expanded="false">
+    <svg class="icon" aria-hidden="true"><use href="#icon-menu"/></svg>
+  </button>
+</nav>
+
+<main>
+  <div class="nf-wrap">
+
+    <p class="nf-code" aria-hidden="true">404</p>
+    <h1 class="nf-title">This page doesn't exist.</h1>
+    <p class="nf-sub">But 720+ games do. Search for one, or pick a popular title.</p>
+
+    <!-- Did-you-mean: JS fills this when the dead URL fuzzy-matches a real game -->
+    <div class="nf-dym" id="nfDym" hidden></div>
+
+    <form class="nf-search-form" action="/" method="get" role="search">
+      <div class="nf-search-wrap">
+        <svg class="nf-search-icon icon" aria-hidden="true"><use href="#icon-search"/></svg>
+        <input
+          class="nf-search-input"
+          type="text"
+          name="search"
+          placeholder="Search games"
+          autocomplete="off"
+          aria-label="Search games"
+          spellcheck="false"
+        >
+      </div>
+    </form>
+
+    <p class="nf-secondary">
+      <a href="/">Browse all games</a>
+      <span class="nf-secondary-sep" aria-hidden="true">Â·</span>
+      <button type="button" id="nfRandom" class="nf-secondary-btn">Pick a random game</button>
+    </p>
+
+    <p class="nf-suggest-label">Popular right now</p>
+    <div class="nf-suggest-grid" id="nfSuggest"></div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>&copy; 2026 UBGHyper</p>
+    <div class="footer-links">
+      <a href="/">Games</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/UBGHyper" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/camo.js"></script>
+<script src="assets/js/utils.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', () => {
+  initCamo('404 — Page Not Found | UBGHyper');
+
+  // Nav hamburger
+  // Phone menu: bound by camo.js. A second toggle here opened and shut it on every tap (2026-10-24).
+
+  // Top games to suggest (curated, matches FAQ "most popular")
+  const TOP_PICKS = [
+    'Drive-Mad','Slope','Cuphead','Level-Devil','Retro-Bowl','Cookie-Clicker'
+  ];
+
+  // Fetch games.json to render suggestion cards + power Random
+  (async () => {
+    let games = [];
+    try {
+      const cached = sessionStorage.getItem('ubg_gamesData');
+      if (cached) {
+        games = JSON.parse(cached).filter(g => g && g.name && g.url && g.status !== 'broken');
+      } else {
+        const res = await fetch('assets/games.json');
+        games = (await res.json()).filter(g => g && g.name && g.url && g.status !== 'broken');
+        sessionStorage.setItem('ubg_gamesData', JSON.stringify(games));
+      }
+    } catch {}
+
+    // ---- Did-you-mean: recover dead / renamed game URLs ----
+    // The May slug-scheme change 404'd ~200 indexed game URLs; this catches them.
+    const dymNorm = s => decodeURIComponent(s || '')
+      .toLowerCase()
+      .replace(/\.html?$/, '')
+      .replace(/[^a-z0-9]+/g, ' ')
+      .replace(/\b(unblocked|game|games|play|online|free|the|new)\b/g, ' ')
+      .replace(/\s+/g, ' ').trim();
+    const dymTokens = s => dymNorm(s).split(' ').filter(t => t.length > 1 || /[0-9]/.test(t)); // keep digits for sequels
+    // Reports the dead URL as an allowlisted route SHAPE plus whether recovery
+    // worked — never the raw path. When the matcher is confident, the matched
+    // game's id rides along: that turns "someone hit a dead game URL" into
+    // "N people wanted Drive-Mad", which is a redirect stub waiting to be written.
+    const report404 = (suggestion, matchedGameId) =>
+      window.ubgAnalytics?.track404({ suggestion, matchedGameId });
+
+    (function didYouMean(){
+      const dym = document.getElementById('nfDym');
+      if (!dym || !games.length) return report404('none');
+      const seg = location.pathname.split('/').filter(Boolean).pop() || '';
+      const attempt = dymTokens(seg);
+      if (!attempt.length) return report404('none');
+
+      let best = null, bestScore = 0, bestSize = Infinity;
+      for (const g of games) {
+        const gt = new Set([...dymTokens(g.url), ...dymTokens(g.name)]);
+        if (!gt.size) continue;
+        let shared = 0;
+        for (const t of attempt) if (gt.has(t)) shared++;
+        const score = shared / attempt.length;          // precision over what they typed
+        // higher score wins; on a tie prefer the most exact match (fewest extra tokens)
+        if (score > bestScore || (score === bestScore && gt.size < bestSize)) {
+          bestScore = score; bestSize = gt.size; best = g;
+        }
+      }
+
+      // Prefill the search box with the cleaned guess (helps even on a weak match)
+      const cleaned = dymNorm(seg);
+      const input = document.querySelector('.nf-search-input');
+      if (input && cleaned && bestScore > 0) input.value = cleaned;
+
+      // Only surface the banner on a confident match (>= half the typed words)
+      if (!best || bestScore < 0.5) return report404(bestScore > 0 ? 'weak' : 'none');
+      report404('confident', best.url);
+      dym.innerHTML = `
+        <a class="nf-dym-card" href="/games/${encodeURIComponent(best.url)}.html" aria-label="Play ${best.name}">
+          <img class="nf-dym-img" src="${gameThumb(best)}" alt="" width="52" height="52" loading="eager" onerror="this.style.display='none'">
+          <span class="nf-dym-text">
+            <span class="nf-dym-kicker">Looking for this?</span>
+            <span class="nf-dym-name">${best.name}</span>
+          </span>
+          <span class="nf-dym-cta">Play <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"/></svg></span>
+        </a>`;
+      dym.hidden = false;
+    })();
+
+    // Suggestion grid: top picks if available, else first 6 games
+    const suggest = document.getElementById('nfSuggest');
+    if (suggest) {
+      const picks = TOP_PICKS
+        .map(url => games.find(g => g.url === url))
+        .filter(Boolean);
+      const fallback = picks.length < 6 ? games.slice(0, 6 - picks.length) : [];
+      const out = [...picks, ...fallback].slice(0, 6);
+      if (out.length) {
+        suggest.innerHTML = out.map((g, i) => `
+          <a href="/games/${encodeURIComponent(g.url)}.html" class="idx-card" style="animation-delay:${i * 30}ms" aria-label="Play ${g.name}">
+            <div class="idx-card-art">
+              <img class="idx-card-img" src="${gameThumb(g)}" alt="${g.name}" width="170" height="170" loading="lazy" onerror="this.style.display='none'">
+              <div class="idx-card-play" aria-hidden="true">
+                <div class="idx-card-play-icon">
+                  <svg class="icon" aria-hidden="true"><use href="#icon-play"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="idx-card-info">
+              <span class="idx-card-name">${g.name}</span>
+              ${g.tags?.[0] ? `<span class="idx-card-tag">${cap(g.tags[0])}</span>` : ''}
+            </div>
+          </a>`).join('');
+      }
+    }
+
+    // Random button
+    document.getElementById('nfRandom')?.addEventListener('click', () => {
+      if (!games.length) { location.href = '/'; return; }
+      const g = games[Math.floor(Math.random() * games.length)];
+      location.href = `/games/${encodeURIComponent(g.url)}.html`;
+    });
+  })();
+});
+</script>
+
+</body>
+</html>

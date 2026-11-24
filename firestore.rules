@@ -1,0 +1,28 @@
+rules_version = '2';
+// Firestore security rules for UBGHyper game ratings.
+// Paste these into Firebase Console → Firestore Database → Rules → Publish.
+//
+// Anyone may READ aggregates (needed to show the average on the page).
+// A WRITE must be exactly one vote: count +1 and sum +1..+5, and may only
+// touch the `sum` and `count` fields. This makes casual tampering pointless
+// without requiring user accounts (acceptable for low-stakes game ratings).
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /ratings/{slug} {
+      allow read: if true;
+
+      allow create: if request.resource.data.keys().hasOnly(['sum', 'count'])
+                    && request.resource.data.count == 1
+                    && request.resource.data.sum is int
+                    && request.resource.data.sum >= 1
+                    && request.resource.data.sum <= 5;
+
+      allow update: if request.resource.data.keys().hasOnly(['sum', 'count'])
+                    && request.resource.data.count == resource.data.count + 1
+                    && request.resource.data.sum >= resource.data.sum + 1
+                    && request.resource.data.sum <= resource.data.sum + 5;
+
+      allow delete: if false;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<base href="https://cdn.jsdelivr.net/gh/UBGHyper/GameList.github.io@2892fc0e9813e7169cd0cc3a5885b3049ccb0e2b/Red-ball-3/">
+<meta name="robots" content="noindex,nofollow">
+<!-- ubg-play-shell: assets from jsDelivr, entry served same-origin -->
+<script>try{var sw=navigator.serviceWorker;if(sw)sw.register=function(){return Promise.reject(new Error("ubg: service worker disabled in play shell"))}}catch(e){}</script>
+    <meta charset='utf-8'>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #ruffle {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            position: absolute; /* Allows for the full-screen effect */
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/gh/UBGHyper/GameList.github.io@2892fc0e9813e7169cd0cc3a5885b3049ccb0e2b/ruffle/ruffle.js"></script>
+    
+    <div id='ruffle'></div>
+    
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("DOMContentLoaded", start_Ruffle, false);
+        
+        function start_Ruffle() {
+            let ruffle = window.RufflePlayer.newest();
+            let player = ruffle.createPlayer();
+            let container = document.getElementById("ruffle");
+            container.appendChild(player);
+            player.load("https://cdn.jsdelivr.net/gh/UBGHyper/GameList.github.io@2892fc0e9813e7169cd0cc3a5885b3049ccb0e2b/Red-ball-3/redball3.swf");
+            
+            // Resize player to fill container
+            player.style.width = '100%';
+            player.style.height = '100%';
+        }
+    </script>
+</body>
+</html>
