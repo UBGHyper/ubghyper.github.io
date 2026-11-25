@@ -1617,7 +1617,8 @@
       "arcade",
       "physics"
     ],
-    "gamedesc": "Stickman Climb is a arcade physics game playable free and unblocked at UBGHyper. Runs instantly in your browser with no download, no sign-up, and works at school on a Chromebook."
+    "gamedesc": "Haul a stickman stuck in a pot up the course with nothing but a pickaxe. Swing to climb through 25 levels, and unlock new pots and pickaxes.",
+    "fixed": "2026-11-25"
   },
   {
     "name": "Slow Roads",
@@ -2507,7 +2508,9 @@
       "shooter",
       "action"
     ],
-    "gamedesc": "Catgun Island is a shooter action game playable free and unblocked at UBGHyper. Runs instantly in your browser with no download, no sign-up, and works at school on a Chromebook."
+    "gamedesc": "Catgun Island is a shooter action game playable free and unblocked at UBGHyper. Runs instantly in your browser with no download, no sign-up, and works at school on a Chromebook.",
+    "status": "broken",
+    "statusnote": "Removed 2026-11-25: the copy we host loads a GDevelop tutorial template (\"GD 101 Top Down Platformer\"), not CatGun Island."
   },
   {
     "name": "Bomb Pass",
@@ -6858,7 +6861,8 @@
       "rhythm",
       "arcade"
     ],
-    "gamedesc": "FNF: Cyber Sensation is a rhythm-driven music game. Hit every beat in time to win the round."
+    "gamedesc": "A cyber-themed Friday Night Funkin’ mod made by Taeyai, JzBoy, Pim.palasite, Pee.Ta.Gorad, atomixx and Kal. Press Enter, then hit the arrows in time.",
+    "fixed": "2026-11-25"
   },
   {
     "name": "Flappy Bird Multiplayer",
@@ -7608,7 +7612,9 @@
       "action",
       "arcade"
     ],
-    "gamedesc": "Just Fall is an action-packed game. Fast reflexes and quick thinking will get you far."
+    "gamedesc": "Just Fall is an action-packed game. Fast reflexes and quick thinking will get you far.",
+    "status": "buggy",
+    "statusnote": "Online multiplayer: its game server cannot be reached right now, so it may say you have been disconnected."
   },
   {
     "name": "Last Breath",
@@ -8723,7 +8729,8 @@
     "tags": [
       "adventure"
     ],
-    "gamedesc": "Dimension Incident is a browser game playable free and unblocked at UBGHyper. Runs instantly with no download or sign-up."
+    "gamedesc": "A horror adventure: explore, find the ten documents hidden around the place and piece together what happened there.",
+    "fixed": "2026-11-25"
   },
   {
     "name": "Flying Gorilla",

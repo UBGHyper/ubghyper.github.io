@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-11-15T08:23:49.468Z",
+ "generatedAt": "2026-11-25T08:58:45.999Z",
  "out": "d:\\UBGHyper\\UBGHyper.github.io\\g",
  "stats": {
-  "written": 669,
-  "partsShims": 67,
+  "written": 668,
+  "partsShims": 66,
   "partsGames": [
    "PVZ-Fusion",
    "Brotato",
@@ -28,7 +28,6 @@
    "Zombie-Derby",
    "Tug-of-War",
    "Flappy-Bird-Nightmares",
-   "Catgun-Island",
    "Bluechasm",
    "Smash-Karts",
    "Ages-of-Conflict",
@@ -115,13 +114,14 @@
    "heavy-entry Royal-Towers-YouTube-Playable (5.2MB entry — needs object storage)",
    "heavy-entry The-Battle-Cats (8.2MB entry — needs object storage)"
   ],
-  "wrappersStripped": 18,
+  "wrappersStripped": 19,
   "wrapperGames": [
    "Drive-Mad",
    "Golf-Battle",
    "Moto3XM",
    "Vex-3",
    "Little-Runmo-The-Game-13",
+   "Stickman-Climb",
    "Paper-IO-2",
    "Basketball-Legends-2020",
    "Stick-Merge-2",
@@ -333,7 +333,6 @@
   "UvuvwevwevweOnyetenvewv",
   "LETHAL-APE",
   "Flappy-Bird-Nightmares",
-  "Catgun-Island",
   "Bomb-Pass",
   "Bluechasm",
   "Bridd-Jump",

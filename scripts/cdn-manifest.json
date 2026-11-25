@@ -164,7 +164,7 @@
     "mb": 80.4
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Minecraft-1.21/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Minecraft-1.21/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -231,7 +231,7 @@
     "mb": 24.6
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Subway-Surfers/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Subway-Surfers/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -348,7 +348,7 @@
   "bytes": 117654,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Cuphead/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Cuphead/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -957,7 +957,7 @@
     "mb": 21.4
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Drift-Hunters/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Drift-Hunters/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -1141,7 +1141,7 @@
   "bytes": 168623009,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/FNAF-1/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/FNAF-1/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1156,7 +1156,7 @@
   "bytes": 16834167,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/SpelunkyClassicHD/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/SpelunkyClassicHD/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1171,7 +1171,7 @@
   "bytes": 183054989,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/FNAF-2/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/FNAF-2/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1186,7 +1186,7 @@
   "bytes": 192017802,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/FNAF-3/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/FNAF-3/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1201,7 +1201,7 @@
   "bytes": 40983833,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Terraria/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Terraria/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1479,7 +1479,7 @@
   "bytes": 100096109,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Undertale/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Undertale/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1494,7 +1494,7 @@
   "bytes": 150284,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Pac-Man/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Pac-Man/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1509,7 +1509,7 @@
   "bytes": 28403904,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Escape-Road/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Escape-Road/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1539,7 +1539,7 @@
   "bytes": 13138299,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Tunnel-Rush/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Tunnel-Rush/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1619,7 +1619,7 @@
   "bytes": 7722318,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Ragdoll-Archers/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Ragdoll-Archers/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1709,7 +1709,7 @@
   "bytes": 38024208,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/FNAE/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/FNAE/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1864,7 +1864,7 @@
     "mb": 36.9
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Slendytubbies-2D/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Slendytubbies-2D/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -1909,7 +1909,7 @@
   "bytes": 13017125,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/BASEBALL-BROS/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/BASEBALL-BROS/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1924,7 +1924,7 @@
   "bytes": 685030,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Flappy-Bird/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Flappy-Bird/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1939,7 +1939,7 @@
   "bytes": 242416,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Wordle/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Wordle/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -1963,7 +1963,7 @@
     "mb": 21.4
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/10-Minutes-Till-Dawn/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/10-Minutes-Till-Dawn/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -1980,7 +1980,7 @@
   "bytes": 19734250,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/A-Dance-of-Fire-and-Ice/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/A-Dance-of-Fire-and-Ice/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2040,7 +2040,7 @@
   "bytes": 6493950,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Mob-control/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Mob-control/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2055,7 +2055,7 @@
   "bytes": 5288307,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Bad-Ice-Cream/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Bad-Ice-Cream/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2070,7 +2070,7 @@
   "bytes": 3853902,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Stickman-Boost/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Stickman-Boost/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2081,11 +2081,11 @@
   "route": "stub",
   "repo": "gamelist8.github.io",
   "folder": "Stickman-Climb",
-  "files": 36,
-  "bytes": 8241857,
+  "files": 35,
+  "bytes": 8216730,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Stickman-Climb/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Stickman-Climb/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2100,7 +2100,7 @@
   "bytes": 13705848,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Slow-Roads/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Slow-Roads/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2115,7 +2115,7 @@
   "bytes": 23277811,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Spelunky/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Spelunky/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2299,7 +2299,7 @@
   "bytes": 14123995,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Trigger-Rally/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Trigger-Rally/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2323,7 +2323,7 @@
   "bytes": 2664194,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/CSGO/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/CSGO/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2338,7 +2338,7 @@
   "bytes": 21001887,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Uno/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Uno/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -2355,7 +2355,7 @@
   "bytes": 1393390,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Hextris/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Hextris/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2379,7 +2379,7 @@
     "mb": 22.7
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Townscaper/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Townscaper/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -2553,7 +2553,7 @@
   "bytes": 17642302,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/crazycattle3d/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/crazycattle3d/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2927,7 +2927,7 @@
   "bytes": 17021088,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Candy-Jump/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Candy-Jump/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -2944,7 +2944,7 @@
   "bytes": 36697577,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Shady-Bears/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Shady-Bears/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -2959,7 +2959,7 @@
   "bytes": 21816885,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Bottle-Flip-3D/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Bottle-Flip-3D/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -2976,7 +2976,7 @@
   "bytes": 2358826,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Tower-Square/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Tower-Square/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3157,7 +3157,7 @@
   "bytes": 81225131,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/BERGENTRUCK-201X/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/BERGENTRUCK-201X/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3172,7 +3172,7 @@
   "bytes": 4868455,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Scratch-Inc/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Scratch-Inc/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3279,31 +3279,11 @@
     "mb": 34.6
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Flappy-Bird-Nightmares/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Flappy-Bird-Nightmares/",
   "entry": "index.html",
   "serviceWorker": [
    "ServiceWorker.js"
   ],
-  "status": "oversized"
- },
- {
-  "url": "Catgun-Island",
-  "name": "Catgun Island",
-  "route": "stub",
-  "repo": "gamelist8.github.io",
-  "folder": "Catgun-Island",
-  "files": 11,
-  "bytes": 68659332,
-  "hops": 1,
-  "oversized": [
-   {
-    "rel": "Build/Build.wasm.gz",
-    "mb": 45.5
-   }
-  ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Catgun-Island/",
-  "entry": "index.html",
-  "serviceWorker": [],
   "status": "oversized"
  },
  {
@@ -3316,7 +3296,7 @@
   "bytes": 720739,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Bomb-Pass/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Bomb-Pass/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3340,7 +3320,7 @@
     "mb": 36.2
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Bluechasm/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Bluechasm/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -3355,7 +3335,7 @@
   "bytes": 15254289,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Bridd-Jump/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Bridd-Jump/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js",
@@ -3608,7 +3588,7 @@
     "mb": 34
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Smash-Karts/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Smash-Karts/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -3630,7 +3610,7 @@
     "mb": 23.1
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Ages-of-Conflict/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Ages-of-Conflict/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -3645,7 +3625,7 @@
   "bytes": 3079191,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Bacon-May-Die/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Bacon-May-Die/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3660,7 +3640,7 @@
   "bytes": 26200647,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Cut-The-Rope/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Cut-The-Rope/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3675,7 +3655,7 @@
   "bytes": 45463512,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Cut-The-Rope-Time-Travel/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Cut-The-Rope-Time-Travel/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3690,7 +3670,7 @@
   "bytes": 12587210,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Cut-The-Rope-Holiday/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Cut-The-Rope-Holiday/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3705,7 +3685,7 @@
   "bytes": 14511153,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Dan-The-Man/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Dan-The-Man/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3720,7 +3700,7 @@
   "bytes": 83517723,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Kindergarten-2/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Kindergarten-2/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3735,7 +3715,7 @@
   "bytes": 90352636,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Milkman-Karlson/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Milkman-Karlson/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3750,7 +3730,7 @@
   "bytes": 8805168,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Time-Shooter-3/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Time-Shooter-3/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3852,7 +3832,7 @@
     "mb": 22.8
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Bloodmoney/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Bloodmoney/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -3867,7 +3847,7 @@
   "bytes": 218009683,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/The-Deadseat/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/The-Deadseat/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3882,7 +3862,7 @@
   "bytes": 70173279,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Tattletail/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Tattletail/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3897,7 +3877,7 @@
   "bytes": 316109133,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Schoolboy-Runaway/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Schoolboy-Runaway/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3917,7 +3897,7 @@
     "mb": 22.4
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Superhot/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Superhot/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -3947,7 +3927,7 @@
   "bytes": 184086741,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Hotline-Miami/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Hotline-Miami/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3962,7 +3942,7 @@
   "bytes": 455517297,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Thats-Not-My-Neighbor/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Thats-Not-My-Neighbor/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3977,7 +3957,7 @@
   "bytes": 94351717,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Raft/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Raft/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -3992,7 +3972,7 @@
   "bytes": 64278351,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/WebFishing/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/WebFishing/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4004,10 +3984,10 @@
   "repo": "gamelist8.github.io",
   "folder": "Geometry-Dash-Lite",
   "files": 35,
-  "bytes": 54779658,
+  "bytes": 54776321,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Geometry-Dash-Lite/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Geometry-Dash-Lite/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4022,7 +4002,7 @@
   "bytes": 971897,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Choppy-Orc/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Choppy-Orc/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4037,7 +4017,7 @@
   "bytes": 10413465,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Final-Earth-2/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Final-Earth-2/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4052,7 +4032,7 @@
   "bytes": 64334004,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Space-Waves/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Space-Waves/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4067,7 +4047,7 @@
   "bytes": 40254454,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/OvO-3/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/OvO-3/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4082,7 +4062,7 @@
   "bytes": 13704252,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Getaway-Shootout/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Getaway-Shootout/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4097,7 +4077,7 @@
   "bytes": 3643589,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Mindustry/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Mindustry/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4112,7 +4092,7 @@
   "bytes": 77172613,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Nubbys-Number-Factory/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Nubbys-Number-Factory/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -4129,7 +4109,7 @@
   "bytes": 102875835,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Shapez/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Shapez/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4144,7 +4124,7 @@
   "bytes": 13142531,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/House-of-Hazards/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/House-of-Hazards/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4172,7 +4152,7 @@
     "mb": 32.1
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Friday-Night-Funkin/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Friday-Night-Funkin/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -4196,7 +4176,7 @@
     "mb": 30.6
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Idle-Lumber-Inc/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Idle-Lumber-Inc/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -4213,7 +4193,7 @@
   "bytes": 291121346,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Side-Effects/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Side-Effects/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4243,7 +4223,7 @@
   "bytes": 16876,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Needy-Streamer-Overload/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Needy-Streamer-Overload/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4258,7 +4238,7 @@
   "bytes": 7369,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Buster-Jam/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Buster-Jam/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4312,7 +4292,7 @@
     "mb": 29
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Boom-Slingers/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Boom-Slingers/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -4327,7 +4307,7 @@
   "bytes": 37089466,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/YOMI-HUSTLE/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/YOMI-HUSTLE/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4377,7 +4357,7 @@
     "mb": 88.6
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/telatro/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/telatro/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -4407,7 +4387,7 @@
   "bytes": 35695551,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/sonic.exe/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/sonic.exe/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -4424,7 +4404,7 @@
   "bytes": 1369559,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/suika-game/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/suika-game/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4544,7 +4524,7 @@
   "bytes": 1858,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Five-Nights-at-Candys-2/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Five-Nights-at-Candys-2/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4609,7 +4589,7 @@
     "mb": 35.4
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Madalin-Stunt-Cars-2/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Madalin-Stunt-Cars-2/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -4648,7 +4628,7 @@
   "bytes": 1018760,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/slitherio/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/slitherio/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4668,7 +4648,7 @@
     "mb": 24.5
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Blockpost/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Blockpost/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -4683,7 +4663,7 @@
   "bytes": 20098,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Blade-Ball/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Blade-Ball/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4698,7 +4678,7 @@
   "bytes": 6571694,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Bad-Ice-Cream-2/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Bad-Ice-Cream-2/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4713,7 +4693,7 @@
   "bytes": 7364594,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Bad-Ice-Cream-3/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Bad-Ice-Cream-3/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4743,7 +4723,7 @@
   "bytes": 8905335,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Moto-X3M-Pool-Party/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Moto-X3M-Pool-Party/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4758,7 +4738,7 @@
   "bytes": 11518558,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Dreadhead-Parkour/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Dreadhead-Parkour/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4773,7 +4753,7 @@
   "bytes": 21479202,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Jetpack-Joyride/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Jetpack-Joyride/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4788,7 +4768,7 @@
   "bytes": 2452,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Candy-Crush/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Candy-Crush/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4818,7 +4798,7 @@
   "bytes": 3217305,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/circloO/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/circloO/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4833,7 +4813,7 @@
   "bytes": 41997985,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Friday-Night-Funkin-Psych-Engine/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Friday-Night-Funkin-Psych-Engine/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4848,7 +4828,7 @@
   "bytes": 8807278,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/webecomewhatwebehold/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/webecomewhatwebehold/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -4880,7 +4860,7 @@
   "bytes": 28401207,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/karlson/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/karlson/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -5023,7 +5003,7 @@
   "bytes": 31090423,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/happy-sheepies/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/happy-sheepies/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8098,7 +8078,7 @@
   "bytes": 43200707,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/slender/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/slender/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8128,7 +8108,7 @@
   "bytes": 91807846,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Minesweeper-Plus/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Minesweeper-Plus/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8143,7 +8123,7 @@
   "bytes": 1243,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Celeste/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Celeste/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8173,7 +8153,7 @@
   "bytes": 11641,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/Doom-3/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/Doom-3/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8285,7 +8265,7 @@
   "bytes": 3816,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@638ec672ce6d99fd0654cbae5119559a64c962d5/TABS/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist8.github.io@71c3a407fc331aad7a9935192099c9aea7cabb46/TABS/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8315,7 +8295,7 @@
   "bytes": 12638668,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/3D-Bowling/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/3D-Bowling/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8330,7 +8310,7 @@
   "bytes": 10083779,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/8-Ball-Billiards-Classic/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/8-Ball-Billiards-Classic/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8345,7 +8325,7 @@
   "bytes": 10243794,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Adventure-Drivers/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Adventure-Drivers/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8360,7 +8340,7 @@
   "bytes": 187434832,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Adventure/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Adventure/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8375,7 +8355,7 @@
   "bytes": 39484814,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Anton-Blast-Demo-v12/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Anton-Blast-Demo-v12/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8390,7 +8370,7 @@
   "bytes": 7074477,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/AttackHole/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/AttackHole/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8414,7 +8394,7 @@
     "mb": 28.4
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Bad-Parenting-1/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Bad-Parenting-1/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -8429,7 +8409,7 @@
   "bytes": 4681915,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Ball-Blast-HTML5/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Ball-Blast-HTML5/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8444,7 +8424,7 @@
   "bytes": 19355330,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Bottle-Jump-3D/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Bottle-Jump-3D/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8459,7 +8439,7 @@
   "bytes": 22393842,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Bouncemasters/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Bouncemasters/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8474,7 +8454,7 @@
   "bytes": 1462,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Boxing-Random/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Boxing-Random/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8489,7 +8469,7 @@
   "bytes": 93106,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/BreakLock/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/BreakLock/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8504,7 +8484,7 @@
   "bytes": 2971896,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Clash-Of-Vikings/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Clash-Of-Vikings/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8519,7 +8499,7 @@
   "bytes": 8988295,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Dadish/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Dadish/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8534,7 +8514,7 @@
   "bytes": 6357104,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Death-Run-3D/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Death-Run-3D/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8549,7 +8529,7 @@
   "bytes": 51274656,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Dig-Deep/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Dig-Deep/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8564,7 +8544,7 @@
   "bytes": 36701,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Dogeminer/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Dogeminer/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8579,7 +8559,7 @@
   "bytes": 83810,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Evil-Glitch/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Evil-Glitch/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8594,7 +8574,7 @@
   "bytes": 5250465,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/EvoWarsio/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/EvoWarsio/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8606,10 +8586,10 @@
   "repo": "gamelist3.github.io",
   "folder": "FNF-Cyber-Sensation-Friday-Night-Funkin",
   "files": 262,
-  "bytes": 89201678,
+  "bytes": 89201966,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/FNF-Cyber-Sensation-Friday-Night-Funkin/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/FNF-Cyber-Sensation-Friday-Night-Funkin/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8624,7 +8604,7 @@
   "bytes": 36956885,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Flappy-Bird-Multiplayer/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Flappy-Bird-Multiplayer/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8639,7 +8619,7 @@
   "bytes": 55047096,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/ForkNSausage/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/ForkNSausage/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8654,7 +8634,7 @@
   "bytes": 27612969,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Friday-Night-Funkin-AKAGE/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Friday-Night-Funkin-AKAGE/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8669,7 +8649,7 @@
   "bytes": 7115,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Fused-240/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Fused-240/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8684,7 +8664,7 @@
   "bytes": 34936546,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/George-and-the-Printer/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/George-and-the-Printer/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8699,7 +8679,7 @@
   "bytes": 44190905,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Gods-Flesh/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Gods-Flesh/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8714,7 +8694,7 @@
   "bytes": 12841003,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Google-Feud/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Google-Feud/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -8731,7 +8711,7 @@
   "bytes": 25406181,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Guess-Their-Answer/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Guess-Their-Answer/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8746,7 +8726,7 @@
   "bytes": 58797508,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Heartbreak-Havoc/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Heartbreak-Havoc/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8761,7 +8741,7 @@
   "bytes": 20309274,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/HighHeels/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/HighHeels/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8776,7 +8756,7 @@
   "bytes": 53253270,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Ice-Dodo/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Ice-Dodo/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8791,7 +8771,7 @@
   "bytes": 26208823,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Luminous-Strike/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Luminous-Strike/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8806,7 +8786,7 @@
   "bytes": 64762,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Ninja-vs-EVILCORP/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Ninja-vs-EVILCORP/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8821,7 +8801,7 @@
   "bytes": 73117191,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Om-Nom-Run/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Om-Nom-Run/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8836,7 +8816,7 @@
   "bytes": 5302,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Outhold/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Outhold/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8851,7 +8831,7 @@
   "bytes": 2741743,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Parking-Rush/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Parking-Rush/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8871,7 +8851,7 @@
     "mb": 27.4
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Pixel-Gun-Survival/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Pixel-Gun-Survival/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -8886,7 +8866,7 @@
   "bytes": 7760898,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Protektor/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Protektor/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -8903,7 +8883,7 @@
   "bytes": 94881222,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Rainbow-Obby-v03x/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Rainbow-Obby-v03x/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8918,7 +8898,7 @@
   "bytes": 47326059,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Rolling-Sky/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Rolling-Sky/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8933,7 +8913,7 @@
   "bytes": 6856,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Scary-Shawarma-3D/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Scary-Shawarma-3D/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8948,7 +8928,7 @@
   "bytes": 18738129,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/SnowBattleio/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/SnowBattleio/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -8972,7 +8952,7 @@
     "mb": 23.6
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Station-Saturn/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Station-Saturn/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -8987,7 +8967,7 @@
   "bytes": 4948,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Stick-Slasher/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Stick-Slasher/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9002,7 +8982,7 @@
   "bytes": 20793611,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Stickman-Destruction-OnlineGamesio/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Stickman-Destruction-OnlineGamesio/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9017,7 +8997,7 @@
   "bytes": 42476,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Stickman-Duel/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Stickman-Duel/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9032,7 +9012,7 @@
   "bytes": 8095762,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Tag/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Tag/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9047,7 +9027,7 @@
   "bytes": 5756737,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Tasty-Pastry-Party/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Tasty-Pastry-Party/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9067,7 +9047,7 @@
     "mb": 24.8
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Telekinesis-Quest/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Telekinesis-Quest/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -9082,7 +9062,7 @@
   "bytes": 1467931,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Territorialio/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Territorialio/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9097,7 +9077,7 @@
   "bytes": 21644862,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Time-Shooter/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Time-Shooter/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9112,7 +9092,7 @@
   "bytes": 4893,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Unity-Web-Player-Roulette-Hero/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Unity-Web-Player-Roulette-Hero/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9127,7 +9107,7 @@
   "bytes": 6599,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Vena/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Vena/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9142,7 +9122,7 @@
   "bytes": 16192510,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Vex-X3M-2/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Vex-X3M-2/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9157,7 +9137,7 @@
   "bytes": 2076,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Volley-Random/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Volley-Random/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -9172,7 +9152,7 @@
   "bytes": 7621299,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Worst-Time-Simulator/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Worst-Time-Simulator/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10070,7 +10050,7 @@
   "bytes": 0,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@79fb7fe5971b0c9512e133f987ca1bd0f5311e33/Nthewayoftheninja.swf/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist3.github.io@5f312b0624c00a54c28d2e6ed38d15274a0f989f/Nthewayoftheninja.swf/",
   "entry": null,
   "serviceWorker": [],
   "status": "eligible"
@@ -10354,7 +10334,7 @@
   "bytes": 86501927,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/BART-BLAST-INDEV-VERSION/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/BART-BLAST-INDEV-VERSION/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10369,7 +10349,7 @@
   "bytes": 17921582,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Blumgi-Rocket/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Blumgi-Rocket/",
   "entry": "index.html",
   "serviceWorker": [
    "sw.js"
@@ -10386,7 +10366,7 @@
   "bytes": 46958207,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Cat-Connection-V2/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Cat-Connection-V2/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10401,7 +10381,7 @@
   "bytes": 31998515,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/DONT-YOU-LECTURE-ME-WITH-YOUR-THIRTY-DOLLAR-WEBSITE/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/DONT-YOU-LECTURE-ME-WITH-YOUR-THIRTY-DOLLAR-WEBSITE/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10416,7 +10396,7 @@
   "bytes": 2861195,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Draw-the-Hill/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Draw-the-Hill/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10431,7 +10411,7 @@
   "bytes": 19870830,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/DrawJoust/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/DrawJoust/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10446,7 +10426,7 @@
   "bytes": 11338919,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Driven-Wild/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Driven-Wild/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10476,7 +10456,7 @@
   "bytes": 29963487,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Endless-Aethos/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Endless-Aethos/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10491,7 +10471,7 @@
   "bytes": 26317274,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Fashion-Battle/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Fashion-Battle/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10526,7 +10506,7 @@
     "mb": 20.3
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Force-Race/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Force-Race/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -10541,7 +10521,7 @@
   "bytes": 80296938,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Friday-Night-Funkin-Plus-Hatsune-Miku/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Friday-Night-Funkin-Plus-Hatsune-Miku/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10556,7 +10536,7 @@
   "bytes": 54438238,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Friday-Night-Funkin-Sarventes-Mid-Fight-Masses/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Friday-Night-Funkin-Sarventes-Mid-Fight-Masses/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10571,7 +10551,7 @@
   "bytes": 21665418,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Funny-Puzzles/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Funny-Puzzles/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10601,7 +10581,7 @@
   "bytes": 36544639,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Game-Inside-a-Game/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Game-Inside-a-Game/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10616,7 +10596,7 @@
   "bytes": 42549197,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Harvestio/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Harvestio/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10646,7 +10626,7 @@
   "bytes": 105623823,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/I-WANNA-BE-THE-GUY-THE-GAME-THE-MOVIE/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/I-WANNA-BE-THE-GUY-THE-GAME-THE-MOVIE/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10691,7 +10671,7 @@
   "bytes": 20812002,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/KittyToy/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/KittyToy/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10721,7 +10701,7 @@
   "bytes": 55768082,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Midnight-Shift-12/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Midnight-Shift-12/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10741,7 +10721,7 @@
     "mb": 53.1
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/MX-OffRoad-Mountain-Bike/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/MX-OffRoad-Mountain-Bike/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -10761,7 +10741,7 @@
     "mb": 24.1
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Oneshot-Legacy/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Oneshot-Legacy/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -10790,7 +10770,7 @@
     "mb": 20
    }
   ],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Papery-Planes/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Papery-Planes/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "oversized"
@@ -10820,7 +10800,7 @@
   "bytes": 5401058,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Royal-Towers-YouTube-Playable/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Royal-Towers-YouTube-Playable/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10835,7 +10815,7 @@
   "bytes": 783368,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/SANDTRIS/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/SANDTRIS/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10877,7 +10857,7 @@
   "bytes": 263166720,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Ultrapool/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Ultrapool/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10898,10 +10878,10 @@
   "repo": "gamelist12.github.io",
   "folder": "Unity-Web-Player-Dimension-incident",
   "files": 17,
-  "bytes": 97397694,
+  "bytes": 97394001,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Unity-Web-Player-Dimension-incident/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Unity-Web-Player-Dimension-incident/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10916,7 +10896,7 @@
   "bytes": 74761238,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Unity-Web-Player-Flying-Gorilla/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Unity-Web-Player-Flying-Gorilla/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10931,7 +10911,7 @@
   "bytes": 10726111,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Vex-X3M/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Vex-X3M/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10946,7 +10926,7 @@
   "bytes": 91964495,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Vs-QT-Mod/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Vs-QT-Mod/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
@@ -10961,7 +10941,7 @@
   "bytes": 20762305,
   "hops": 1,
   "oversized": [],
-  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@0b847a8300da4471bd9429e8df07831128ff9631/Weapon-Upgrade-Rush/",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/freeonlinewebtools/gamelist12.github.io@ac5bb674e66850cee7d9b9c48e333c754649e710/Weapon-Upgrade-Rush/",
   "entry": "index.html",
   "serviceWorker": [],
   "status": "eligible"
