@@ -35,6 +35,7 @@ const GA_ID      = 'G-VE9J0CCHWZ';
 
 const games = JSON.parse(fs.readFileSync(GAMES_JSON, 'utf8'));
 const topContent = require('./top-game-content');
+const NOINDEX_LANDING = require('./noindex-landing'); // rival-named landing pages kept out of the index and the sitemap
 
 // play.html is the single source of truth for the player UI — game pages are
 // generated from it via marker-based transforms in buildPage(). If play.html
@@ -528,7 +529,7 @@ for (const g of games) {
   const ringHtml = ring.length && exploreTag ? `        <p>More ${esc(cap(exploreTag).toLowerCase())} games to try: ${ring.map(r => `<a href="/games/${encodeURIComponent(r.url)}.html">${esc(r.name)}</a>`).join(', ')}.</p>\n` : '';
   const exploreHtml = `      <section class="hub-intro gp-explore" aria-label="More unblocked games">
         <h2 class="hub-intro-title">More free unblocked games</h2>
-${ringHtml}        <p>Enjoyed ${esc(g.name)}? ${exploreTag ?`Browse more <a href="/games/cat-${encodeURIComponent(exploreTag)}.html">${esc(cap(exploreTag))} games</a> or the` : 'Browse the'} <a href="/all-games.html">full A–Z game list</a>, and explore our collections: <a href="/unblocked-games-66.html">Unblocked Games 66</a>, <a href="/unblocked-games-76.html">Unblocked Games 76</a>, <a href="/unblocked-games-wtf.html">WTF</a>, <a href="/unblocked-games-6x.html">6x</a>, <a href="/cool-ubg-games.html">Cool UBG Games</a>, and <a href="/unblocked-games-chromebook.html">games for Chromebook</a>.</p>
+${ringHtml}        <p>Enjoyed ${esc(g.name)}? ${exploreTag ?`Browse more <a href="/games/cat-${encodeURIComponent(exploreTag)}.html">${esc(cap(exploreTag))} games</a> or the` : 'Browse the'} <a href="/all-games.html">full A–Z game list</a>, and explore our collections: <a href="/cool-ubg-games.html">Cool UBG Games</a>, <a href="/free-online-games.html">free online games</a>, <a href="/unblocked-games-chromebook.html">games for Chromebook</a> and <a href="/minecraft-unblocked.html">Minecraft unblocked</a>.</p>
       </section>`;
 
   const seoHtml = `
@@ -715,7 +716,22 @@ const catEntries = allTags.map(t => ({
   loc: `${SITE_URL}/games/cat-${encodeURIComponent(t)}.html`,
 }));
 
-const allEntries = [...staticEntries, ...catEntries, ...gameEntries];
+// Static, landing and category pages: bump <lastmod> when their visible text changes (scripts, styles
+// and tags stripped, so ad or nav markup alone does not count). Before 2026-11-25 these kept whatever
+// date they first got, so the homepage claimed it last changed on 2026-05-23. A page with no stored
+// hash yet is stamped today once, since it has certainly changed since its old date.
+function staticChanged(loc) {
+  if (loc.endsWith('/all-games.html')) return false;   // has its own signature above
+  const rel = loc === `${SITE_URL}/` ? 'index.html' : loc.replace(`${SITE_URL}/`, '');
+  let html; try { html = fs.readFileSync(path.join(ROOT, decodeURIComponent(rel)), 'utf8'); } catch { return false; }
+  const text = html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  const key = 'page:' + rel, sig = require('crypto').createHash('sha1').update(text).digest('hex').slice(0, 16);
+  newSigs[key] = sig;
+  return prevSigs[key] !== sig;
+}
+const indexableStatic = staticEntries.filter(e => !NOINDEX_LANDING.has(e.loc.replace(`${SITE_URL}/`, '').replace(/\.html$/, '')));
+const allEntries = [...indexableStatic, ...catEntries, ...gameEntries];
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
@@ -723,7 +739,8 @@ ${allEntries.map(e => {
   // Bump lastmod only for game pages whose content changed this run;
   // everything else keeps its previous date so the sitemap stays trustworthy.
   const bumped = (e.gameUrl && changedUrls.has(e.gameUrl))
-    || (e.loc.endsWith('/all-games.html') && changedUrls.has('__all-games__'));
+    || (e.loc.endsWith('/all-games.html') && changedUrls.has('__all-games__'))
+    || (!e.gameUrl && staticChanged(e.loc));
   const lastmod = bumped ? today : (prevLastmod[e.loc] || today);
   const imageTag = e.img ? `\n    <image:image><image:loc>${esc(e.img)}</image:loc></image:image>` : '';
   return `  <url>\n    <loc>${e.loc}</loc>\n    <lastmod>${lastmod}</lastmod>${imageTag}\n  </url>`;
@@ -733,4 +750,4 @@ ${allEntries.map(e => {
 
 fs.writeFileSync(SITEMAP, sitemapXml, 'utf8');
 fs.writeFileSync(SIG_FILE, JSON.stringify(newSigs, null, 1));
-console.log(`Sitemap: rewrote with ${allEntries.length} URLs (${gameEntries.length} games, ${catEntries.length} categories, ${staticEntries.length} static/landing)`);
+console.log(`Sitemap: rewrote with ${allEntries.length} URLs (${gameEntries.length} games, ${catEntries.length} categories, ${indexableStatic.length} static/landing)`);

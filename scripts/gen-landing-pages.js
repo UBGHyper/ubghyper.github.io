@@ -5,6 +5,7 @@
 
 const fs   = require('fs');
 const path = require('path');
+const NOINDEX_LANDING = require('./noindex-landing'); // rival-named pages: noindex,follow
 
 const ROOT       = path.join(__dirname, '..');
 const GAMES_JSON = path.join(ROOT, 'assets', 'games.json');
@@ -908,7 +909,7 @@ function renderPage(p) {
 <title>${esc(p.title)}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="${esc(p.desc)}">
-<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="robots" content="${NOINDEX_LANDING.has(p.slug) ? 'noindex,follow' : 'index,follow,max-image-preview:large,max-snippet:-1'}">
 <link rel="canonical" href="${pageUrl}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(p.title)}">
