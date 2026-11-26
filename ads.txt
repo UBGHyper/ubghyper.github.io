@@ -87,6 +87,7 @@ adagio.io, 1566, RESELLER
 adagio.io, 1593, RESELLER
 adagio.io, 1595, RESELLER
 adagio.io, 1614, RESELLER
+adagio.io, 1896, RESELLER
 adagio.io,1417,DIRECT
 adasta.it, 176, RESELLER
 adbro.me,247a8dea-9f0b-4cfe-881a-a2148be0bc61,DIRECT
@@ -169,6 +170,7 @@ admatic.com.tr, mix-pub-3055566533, RESELLER
 admatic.com.tr, mix-pub-5032324134, RESELLER, uufps1dh5stc6euk
 admatic.de, ade-pub-2202529340, RESELLER
 admatic.de, ade-pub-4162619937, RESELLER
+admatic.de, ade-pub-6729785925, RESELLER
 admatic.de, ade-pub-7606008895, RESELLER, uufps1dh5stc6euk
 admatic.de, ade-pub-8970410566, DIRECT, uufps1dh5stc6euk
 admatic.de,ade-pub-5479184981,RESELLER
@@ -1157,6 +1159,7 @@ pmbmonetize.com, 23085823283, DIRECT
 pmc.com,1243000,RESELLER,8dd52f825890bb44
 pokkt.com, 5793, DIRECT, c45702d9311e25fd
 pokkt.com, 5886, RESELLER, c45702d9311e25fd
+ppc.buzz, b7b16ecf8ca53723593894116071700c35605, RESELLER
 ppc.buzz, b7b16ecf8ca53723593894116071700c36928, DIRECT
 ppc.buzz, b7b16ecf8ca53723593894116071700c37243, DIRECT
 prodooh.com , pdh-5345-p1, DIRECT
@@ -1721,6 +1724,7 @@ smilewanted.com, 5766, RESELLER #GABOT
 smilewanted.com, 5866, RESELLER
 smilewanted.com, 5902, RESELLER
 smilewanted.com, 5926, RESELLER
+smilewanted.com, 6001, RESELLER
 smilewanted.com, 6078, RESELLER
 smilewanted.com, 6153, RESELLER
 smilewanted.com,2457,RESELLER
@@ -1981,8 +1985,10 @@ vistarsagency.com, cqqccatc23j9v5bv3fv0, RESELLER, 8db795910158017c
 vistarsagency.com, d44uo7esbdfs73brmla0, RESELLER, 8db795910158017c
 voisetech.com, 1034, RESELLER #Voise
 voisetech.com, 1402, RESELLER, 9009ef0379162448
+weamcom.com, e46de7e1bcaaced9a54f1e9d0d2f800d39394, DIRECT,
 webtvasia, 6018357107, DIRECT
 wovenaudience.com, 1024, DIRECT
+x.adprime.com, AJxF6R29a9M6CaTvK, RESELLER
 x.adprime.com, AJxF6R7a9M6CaTvK, RESELLER
 x.adprime.com, AJxF6R93a9M6CaTvK, RESELLER
 x.adprime.com, AJxF6R94a9M6CaTvK, RESELLER
